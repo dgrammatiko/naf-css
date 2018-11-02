@@ -1,0 +1,97 @@
+*,
+::before,
+::after{
+  background-repeat:no-repeat;
+  box-sizing:border-box;
+}
+
+::before,
+::after{
+  text-decoration:inherit;
+  vertical-align:inherit;
+}
+
+html{
+  font-size: 62.5%;
+  line-height:1.15;
+  -ms-text-size-adjust:100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-text-size-adjust:100%;
+  word-break:break-word;
+  cursor:default;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: var(--background-color, white);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*
+ * The Lobotomised Owl selector from @heydonworks, as described in:
+ * http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+ */
+* + * {
+  margin-top: 1rem;
+}
+
+* + br,
+option + option,
+th + th,
+th + td,
+td + th,
+td + td,
+li + li {
+  margin-top: 0;
+}
+
+::-moz-selection{
+  background-color: var(--color-primary);
+  color:#fff;
+  text-shadow:none;
+}
+
+::selection{
+  background-color: var(--color-primary);
+  color:#fff;
+  text-shadow:none;
+}
+
+template{
+  display:none;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex]{
+  -ms-touch-action:manipulation;
+  touch-action:manipulation;
+}
+
+[hidden]{
+  display:none;
+}
+
+[aria-busy="true"]{
+  cursor:progress;
+}
+
+[aria-controls]{
+  cursor:pointer;
+}
+
+[aria-disabled],
+[disabled]{
+  cursor:disabled;
+}
+
+[aria-hidden="false"][hidden]:not(:focus){
+  clip:rect(0, 0, 0, 0);
+  display:inherit;
+  position:absolute;
+}
