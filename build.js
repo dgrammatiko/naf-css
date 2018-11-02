@@ -36,6 +36,7 @@ const pluginsCompatibility = [
     autoprefixer: {
       grid: true,
       browsers: "ie 11",
+      'from': undefined,
     },
   }),
 ];
@@ -46,7 +47,7 @@ const nano = [
 ]
 
 const pluginsCurrent = [
-  require('postcss-easy-import')({ prefix: '_', extensions: '.pcss' }),
+  require('postcss-easy-import')({ extensions: '.pcss' }),
   require('postcss-mixins'),
   require('postcss-custom-selectors'),
   require('postcss-nesting'),
@@ -65,27 +66,28 @@ process.stdout.write(kleur.blue(`compress:           ${parseBoolean(options.comp
 postcss(pluginsCompatibility).process(
   fs.readFileSync('./src/critical.pcss', 'utf8'),
   { 'browsers': options.browsers, 'from': undefined, removeAll: true }
-).then(function (result) {
+).then((result) => {
   fs.writeFileSync('./css/critical.css', result.css);
 
   // Minify
-  postcss(nano).process(result.css).then(function (r) {
+  postcss(nano).process(result.css).then((r) => {
     fs.writeFileSync('./css/critical.min.css', r.css);
+    process.stdout.write(kleur.green(`File critical.min.css [Brotli-size=${brotliSize.sync(r.css)}, GZip-size=${gzipSize.sync(r.css)}, Uncompressed-size=${r.css.length}] was created succesfully 👍 `) + "\n");
   });
 
-  const newFile = result.css;
-  process.stdout.write(kleur.green(`File critical.css [Brotli-size=${brotliSize.sync(newFile)}, GZip-size=${gzipSize.sync(newFile)}, Uncompressed-size=${newFile.length}] was created succesfully 👍 `) + "\n");
+  process.stdout.write(kleur.green(`File critical.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n");
 });
 
 postcss(pluginsCompatibility).process(
   fs.readFileSync('./src/lazy.pcss', 'utf8'),
   { 'browsers': options.browsers, 'from': undefined, removeAll: true }
-).then(function (result) {
+).then((result) => {
   fs.writeFileSync('./css/lazy-ie.css', result.css);
 
   // Minify
-  postcss(nano).process(result.css).then(function (r) {
+  postcss(nano).process(result.css).then((r) => {
     fs.writeFileSync('./css/lazy-ie.min.css', r.css);
+    process.stdout.write(kleur.green(`File lazy-ie.min.css [Brotli-size=${brotliSize.sync(r.css)}, GZip-size=${gzipSize.sync(r.css)}, Uncompressed-size=${r.css.length}] was created succesfully 👍 `) + "\n")
   });
 
   process.stdout.write(kleur.green(`File lazy-ie.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n")
@@ -94,12 +96,13 @@ postcss(pluginsCompatibility).process(
 postcss(pluginsCurrent).process(
   fs.readFileSync('./src/lazy.pcss', 'utf8'),
   { 'browsers': options.browsers, 'from': undefined, removeAll: true }
-).then(function (result) {
+).then((result) => {
   fs.writeFileSync('./css/lazy.css', result.css);
 
   // Minify
-  postcss(nano).process(result.css).then(function (r) {
+  postcss(nano).process(result.css).then((r) => {
     fs.writeFileSync('./css/lazy-ie.min.css', r.css);
+    process.stdout.write(kleur.green(`File lazy.min.css [Brotli-size=${brotliSize.sync(r.css)}, GZip-size=${gzipSize.sync(r.css)}, Uncompressed-size=${r.css.length}] was created succesfully 👍 `) + "\n")
   });
 
   process.stdout.write(kleur.green(`File lazy.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n")

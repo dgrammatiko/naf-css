@@ -2,7 +2,6 @@
   --background-color:#ffffff;
   --selection-color:#27ae60;
   --color-primary:#2c3e50;
-  --color-darkGrey:#2c3e50;
   --color-danger:#c0392b;
   --color-success:#27ae60;
   --color-warning:#f39c12;
@@ -453,7 +452,7 @@ blockquote{
   background-color:#f3f3f6;
   padding:1.5rem 2rem;
   border-left:1rem solid #2c3e50;
-  border-left:1rem solid var(--color-darkGrey);
+  border-left:1rem solid var(--color-primary);
   overflow:auto;
 }
 
@@ -484,7 +483,7 @@ iframe{
 hr{
   border:none;
   background-color:#2c3e50;
-  background-color:var(--color-darkGrey);
+  background-color:var(--color-primary);
   height:1px;
   margin:1rem 0;
 }
@@ -539,12 +538,12 @@ th{
 
 thead{
   border-bottom:2px solid #2c3e50;
-  border-bottom:2px solid var(--color-darkGrey);
+  border-bottom:2px solid var(--color-primary);
 }
 
 tfoot{
   border-top:2px solid #2c3e50;
-  border-top:2px solid var(--color-darkGrey);
+  border-top:2px solid var(--color-primary);
 }
 
 p{
@@ -670,7 +669,7 @@ textarea[type="text"]{
   padding:0.8rem 1rem;
   border-radius:4px;
   border:1px solid #2c3e50;
-  border:1px solid var(--color-darkGrey);
+  border:1px solid var(--color-primary);
   font-size:1em;
   transition:all 0.2s ease;
   display:block;
