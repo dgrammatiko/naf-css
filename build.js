@@ -38,28 +38,11 @@ const pluginsCompatibility = [
       browsers: "ie 11",
     },
   }),
-  // ({
-  //   'browsers': options.browsers,
-  //   'customProperties': parseBoolean(options.customProperties),
-  //   'colorFunction': parseBoolean(options.colorFunction),
-  //   'customSelectors': parseBoolean(options.customSelectors),
-  //   'sourcemap': parseBoolean(options.sourcemap),
-  //   'compress': parseBoolean(options.compress),
-  //   'from': undefined,
-  // }),
-
-  // require('cssnano')
 ];
 
 
-const plugins = [
-  require('postcss-easy-import')({ extensions: '.pcss' }),
-  require('postcss-mixins'),
-  require('postcss-custom-selectors'),
-  require('postcss-nested'),
-  require('autoprefixer'),
-  require('postcss-custom-media'),
-  require('postcss-discard-comments')
+const nano = [
+  require('cssnano')
 ]
 
 const pluginsCurrent = [
@@ -70,15 +53,14 @@ const pluginsCurrent = [
   require('autoprefixer')({ 'browsers': options.browsers, 'from': undefined, }),
   require('postcss-custom-media'),
   require('postcss-discard-comments')({ removeAll: true }),
-  require('cssnano')
 ];
 
-process.stdout.write(kleur.blue(`Autoprefixing for ${options.browsers} browsers 🚑 `) + "\n")
-process.stdout.write(kleur.blue(`customProperties:   ${kleur.green(options.customProperties)} ✅ `) + "\n")
-process.stdout.write(kleur.blue(`colorFunction:      ${kleur.green(options.colorFunction)} ✅ `) + "\n")
-process.stdout.write(kleur.blue(`customSelectors:    ${kleur.green(options.customSelectors)} ✅ `) + "\n")
-process.stdout.write(kleur.blue(`sourcemaps:         ${kleur.green(options.sourcemap)} ✅ `) + "\n")
-process.stdout.write(kleur.blue(`compress:           ${kleur.green(options.compress)} ✅ `) + "\n")
+process.stdout.write(kleur.blue(`Autoprefixing for ${options.browsers} browsers 🚑 `) + "\n");
+process.stdout.write(kleur.blue(`customProperties:   ${options.customProperties === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`colorFunction:      ${options.colorFunction === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`customSelectors:    ${options.customSelectors === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`sourcemaps:         ${options.sourcemaps === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`compress:           ${options.compress === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
 
 postcss(pluginsCompatibility).process(
   fs.readFileSync('./src/critical.pcss', 'utf8'),
@@ -86,41 +68,39 @@ postcss(pluginsCompatibility).process(
 ).then(function (result) {
   fs.writeFileSync('./css/critical.css', result.css);
 
+  // Minify
+  postcss(nano).process(result.css).then(function (r) {
+    fs.writeFileSync('./css/critical.min.css', r.css);
+  });
+
   const newFile = result.css;
   process.stdout.write(kleur.green(`File critical.css [Brotli-size=${brotliSize.sync(newFile)}, GZip-size=${gzipSize.sync(newFile)}, Uncompressed-size=${newFile.length}] was created succesfully 👍 `) + "\n");
 });
-
-// postcss(plugins).process(
-//   fs.readFileSync('./src/critical-form.pcss', 'utf8'),
-//   { 'browsers': options.browsers, 'from': undefined, removeAll: true }
-// ).then(function (result) {
-//   fs.writeFileSync('./css/critical-form.css', result.css);
-//   process.stdout.write(kleur.green(`The file critical-form.css was created succesfully 👍 `) + "\n")
-// });
 
 postcss(pluginsCompatibility).process(
   fs.readFileSync('./src/lazy.pcss', 'utf8'),
   { 'browsers': options.browsers, 'from': undefined, removeAll: true }
 ).then(function (result) {
-  fs.writeFileSync('./css/lazy.css', result.css);
-  process.stdout.write(kleur.green(`File lazy-loaded.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n")
+  fs.writeFileSync('./css/lazy-ie.css', result.css);
+
+  // Minify
+  postcss(nano).process(result.css).then(function (r) {
+    fs.writeFileSync('./css/lazy-ie.min.css', r.css);
+  });
+
+  process.stdout.write(kleur.green(`File lazy-ie.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n")
 });
 
-// postcss(pluginsCurrent).process(
-//     fs.readFileSync('./src/lazy.pcss', 'utf8'),
-//     { 'browsers': options.browsers, 'from': undefined, removeAll: true }
-//   ).then(function (result) {
-//     fs.writeFileSync('./css/lazy.css', result.css);
-//     process.stdout.write(kleur.green(`File lazy-loaded.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n")
-//   });
-// const processors = [
-  // cssnext({
-  //   'browsers': options.browsers,
-  //   'customProperties': parseBoolean(options.customProperties),
-  //   'colorFunction': parseBoolean(options.colorFunction),
-  //   'customSelectors': parseBoolean(options.customSelectors),
-  //   'sourcemap': parseBoolean(options.sourcemap),
-  //   'compress': parseBoolean(options.compress),
-  //   'from': undefined,
-  // })
-// ];
+postcss(pluginsCurrent).process(
+  fs.readFileSync('./src/lazy.pcss', 'utf8'),
+  { 'browsers': options.browsers, 'from': undefined, removeAll: true }
+).then(function (result) {
+  fs.writeFileSync('./css/lazy.css', result.css);
+
+  // Minify
+  postcss(nano).process(result.css).then(function (r) {
+    fs.writeFileSync('./css/lazy-ie.min.css', r.css);
+  });
+
+  process.stdout.write(kleur.green(`File lazy.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n")
+});
