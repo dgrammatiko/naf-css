@@ -1,7 +1,7 @@
 {
   "name": "naf-css",
   "version": "1.0.0",
-  "description": "A lightweight, progressive, PostCSS css thingy.",
+  "description": "A lightweight, progressive, PostCSS thingy.",
   "main": "build.js",
   "scripts": {
     "lint": "npx stylelint \"src/**/*.pcss\"",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dgrammatiko/naf.git"
+    "url": "git+https://github.com/dgrammatiko/naf-css.git"
   },
   "author": "Dimitris Grammatikogiannis <d.grammatiko@gmail.com> (dgrammatiko.online)",
   "license": "MIT",
