@@ -45,7 +45,7 @@
     "customProperties": "true",
     "colorFunction": "true",
     "customSelectors": "true",
-    "sourcemap": "true",
+    "sourcemaps": "false",
     "compress": "true"
   }
 }

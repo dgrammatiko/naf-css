@@ -56,11 +56,11 @@ const pluginsCurrent = [
 ];
 
 process.stdout.write(kleur.blue(`Autoprefixing for ${options.browsers} browsers 🚑 `) + "\n");
-process.stdout.write(kleur.blue(`customProperties:   ${options.customProperties === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
-process.stdout.write(kleur.blue(`colorFunction:      ${options.colorFunction === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
-process.stdout.write(kleur.blue(`customSelectors:    ${options.customSelectors === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
-process.stdout.write(kleur.blue(`sourcemaps:         ${options.sourcemaps === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
-process.stdout.write(kleur.blue(`compress:           ${options.compress === 'true' ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`customProperties:   ${parseBoolean(options.customProperties) === true ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`colorFunction:      ${parseBoolean(options.colorFunction) === true ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`customSelectors:    ${parseBoolean(options.customSelectors) === true ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`sourcemaps:         ${parseBoolean(options.sourcemaps) === true ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
+process.stdout.write(kleur.blue(`compress:           ${parseBoolean(options.compress) === true ? kleur.green('true ✅\n') : kleur.green('false ❌\n')}  `));
 
 postcss(pluginsCompatibility).process(
   fs.readFileSync('./src/critical.pcss', 'utf8'),
