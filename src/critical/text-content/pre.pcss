@@ -3,7 +3,16 @@ kbd,
 pre,
 samp,
 tt {
-  font-family: monaco, "Consolas", "Lucida Console", monospace;
+  font-family:
+    /* macOS 10.10+ */ Menlo,
+    /* Windows 6+ */ Consolas,
+    /* Android 4+ */ Roboto Mono,
+    /* Ubuntu 10.10+ */ Ubuntu Monospace,
+    /* KDE Plasma 4+ */ Oxygen Mono,
+    /* Linux/OpenOffice fallback */ Liberation Mono,
+    /* fallback */ monospace; /* 1 */
+
+  font-size: 1em; /* 2 */
 }
 
 code,
@@ -16,7 +25,19 @@ kbd {
   background-color: #f3f3f6;
 }
 
+/**
+ * 1. Use the default monospace user interface font
+ *    in all browsers (opinionated).
+ */
 pre {
+  font-family:
+  /* macOS 10.10+ */ Menlo,
+  /* Windows 6+ */ Consolas,
+  /* Android 4+ */ Roboto Mono,
+  /* Ubuntu 10.10+ */ Ubuntu Monospace,
+  /* KDE Plasma 4+ */ Oxygen Mono,
+  /* Linux/OpenOffice fallback */ Liberation Mono,
+  /* fallback */ monospace; /* 1 */
   background-color: #f3f3f6;
   font-size: 1em;
   padding: 1rem;

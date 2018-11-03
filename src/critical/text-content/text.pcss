@@ -4,15 +4,22 @@ p {
   word-wrap: break-word;
 }
 
-/* ABBREVIATIONS */
-abbr,
-.abbr {
+/**
+ * Add the correct text decoration in Edge, IE, Opera, and Safari.
+ */
+
+abbr[title], .abbr {
+  text-decoration: underline;
+  text-decoration: underline dotted;
   text-transform: uppercase;
 }
 
+/**
+ * Add the correct font size in all browsers.
+ */
 small,
 .small {
-  font-size: .75rem;
+  font-size: 80%;
 }
 
 sub,
@@ -31,8 +38,11 @@ sub {
   bottom: -.25em;
 }
 
-/* BOLDY STUFF */
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
 b,
 strong {
-  font-weight: 800;
+  font-weight: bolder;
 }

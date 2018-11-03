@@ -1,29 +1,67 @@
+/*! sanitize.css v7.0.3 | CC0 License | github.com/csstools/sanitize.css */
+
+/* Document
+ * ========================================================================== */
+
+/**
+ * 1. Remove repeating backgrounds in all browsers (opinionated).
+ * 2. Add border box sizing in all browsers (opinionated).
+ */
+
 *,
 ::before,
-::after{
-  background-repeat:no-repeat;
-  box-sizing:border-box;
+::after {
+  background-repeat: no-repeat; /* 1 */
+  box-sizing: border-box; /* 2 */
 }
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritance in all browsers (opinionated).
+ */
 
 ::before,
-::after{
-  text-decoration:inherit;
-  vertical-align:inherit;
+::after {
+  text-decoration: inherit; /* 1 */
+  vertical-align: inherit; /* 2 */
 }
 
-html{
-  font-size: 62.5%;
-  line-height:1.15;
-  -ms-text-size-adjust:100%;
-  -ms-overflow-style: scrollbar;
-  -webkit-text-size-adjust:100%;
-  word-break:break-word;
-  cursor:default;
-  min-width: 300px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  background-color: var(--background-color, white);
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+/**
+ * 1. Use the default cursor in all browsers (opinionated).
+ * 2. Use the default user interface font in all browsers (opinionated).
+ * 3. Correct the line height in all browsers.
+ * 4. Use a 4-space tab width in all browsers (opinionated).
+ * 5. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ * 6. Breaks words to prevent overflow in all browsers (opinionated).
+ */
+
+html {
+  cursor: default; /* 1 */
+  font-family:
+    system-ui,
+    /* macOS 10.11-10.12 */ -apple-system,
+    /* Windows 6+ */ Segoe UI,
+    /* Android 4+ */ Roboto,
+    /* Ubuntu 10.10+ */ Ubuntu,
+    /* Gnome 3+ */ Cantarell,
+    /* KDE Plasma 4+ */ Oxygen,
+    /* fallback */ sans-serif,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji"; /* 2 */
+
+  line-height: 1.15; /* 3 */
+  -moz-tab-size: 4; /* 4 */
+  tab-size: 4; /* 4 */
+  -ms-text-size-adjust: 100%; /* 5 */
+  -webkit-text-size-adjust: 100%; /* 5 */
+  word-break: break-word; /* 6 */
+  /**
+   * End of sanitize.css
+   */
+    background-color: var(--background-color, white);
 }
 
 /*
@@ -44,21 +82,110 @@ li + li {
   margin-top: 0;
 }
 
+/*
+ * Remove the text shadow on text selections in Firefox 61- (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow
+ *    in all browsers (opinionated).
+ */
 ::-moz-selection{
-  background-color: var(--color-primary);
-  color:#fff;
+  background-color: var(--color-primary); /* 1 */
+  color:#fff; /* 1 */
   text-shadow:none;
 }
 
 ::selection{
-  background-color: var(--color-primary);
-  color:#fff;
+  background-color: var(--color-primary); /* 1 */
+  color:#fff; /* 1 */
   text-shadow:none;
 }
 
-template{
-  display:none;
+/* Embedded content
+ * ========================================================================== */
+
+/*
+ * Change the alignment on media elements in all browers (opinionated).
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
 }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+
+svg {
+  fill: currentColor;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Scripting
+ * ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+
+
+/* User interaction
+ * ========================================================================== */
+
+/*
+ * 1. Remove the tapping delay on clickable elements
+      in all browsers (opinionated).
+ * 2. Remove the tapping delay in IE 10.
+ */
 
 a,
 area,
@@ -68,30 +195,55 @@ label,
 select,
 summary,
 textarea,
-[tabindex]{
-  -ms-touch-action:manipulation;
-  touch-action:manipulation;
+[tabindex] {
+  -ms-touch-action: manipulation; /* 1 */
+  touch-action: manipulation; /* 2 */
 }
 
-[hidden]{
-  display:none;
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
 }
 
-[aria-busy="true"]{
-  cursor:progress;
+/* Accessibility
+ * ========================================================================== */
+
+/**
+ * Change the cursor on busy elements in all browsers (opinionated).
+ */
+
+[aria-busy="true"] {
+  cursor: progress;
 }
 
-[aria-controls]{
-  cursor:pointer;
+/*
+ * Change the cursor on control elements in all browsers (opinionated).
+ */
+
+[aria-controls] {
+  cursor: pointer;
 }
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
 
 [aria-disabled],
-[disabled]{
-  cursor:disabled;
+[disabled] {
+  cursor: not-allowed;
 }
 
-[aria-hidden="false"][hidden]:not(:focus){
-  clip:rect(0, 0, 0, 0);
-  display:inherit;
-  position:absolute;
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute;
 }
