@@ -23,18 +23,6 @@
   text-decoration:inherit;
   vertical-align:inherit;
 }
-html{
-  cursor:default;
-  font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-  line-height:1.15;
-  tab-size:4;
-  -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%;
-  word-break:break-word;
-    background-color:#ffffff;
-    background-color:var(--background-color, white);
-}
 * + *{
   margin-top:1rem;
 }
@@ -113,13 +101,24 @@ textarea,
   display:inherit;
   position:absolute;
 }
+html{
+  cursor:default;
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  line-height:1.15;
+  tab-size:4;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  word-break:break-word;
+    background-color:#ffffff;
+    background-color:var(--background-color, white);
+}
 body{
   letter-spacing:0.01em;
   line-height:1.6;
   font-size:1.6rem;
   font-size:var(--font-size);
-  font-weight:400;
-  font-family:"Segoe UI", "Helvetica Neue", sans-serif;
+  font-weight:100;
   font-family:-apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
@@ -294,7 +293,7 @@ textarea{
 button,
 input,
 select{
-  margin:0;
+  margin:5px 0;
 }
 button{
   overflow:visible;
@@ -391,30 +390,32 @@ button{
 .btn + .btn{
   margin-left:1rem;
 }
-.btn:hover,
-[type="button"]:hover,
-[type="reset"]:hover,
-[type="submit"]:hover,
-[role="button"]:hover,
-button:hover,
-.btn:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus,
-[role="button"]:focus,
-button:focus{
-  background-color:#2c3e50;
-  background-color:var(--color-primary);
-  color:#fff;
-  border:1px solid #2c3e50;
-  border:1px solid var(--color-primary);
-}
 .btn:active,
 [type="button"]:active,
 [type="reset"]:active,
 [type="submit"]:active,
 button:active{
   transform:scale(0.98);
+}
+.btn:not([disabled]):hover,
+[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover,
+[role="button"]:hover,
+button:not([disabled]):hover,
+.btn:not([disabled]):focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus,
+[role="button"]:focus,
+button:not([disabled]):focus{
+  background-color:#2c3e50;
+  background-color:var(--color-primary);
+  color:#fff;
+  border:1px solid #2c3e50;
+  border:1px solid var(--color-primary);
+  box-shadow:0 0 10px #2c3e50;
+  box-shadow:0 0 10px var(--color-primary);
 }
 .grouped{
   display:flex;
@@ -450,7 +451,8 @@ button[disabled]{
 }
 fieldset{
   padding:0.35em 0.75em 0.625em;
-  border:1px solid var(--color-);
+  border:1px solid #2c3e50;
+  border:1px solid var(--color-primary);
 }
 input[type="search"]{
 -webkit-appearance:none;
@@ -500,8 +502,8 @@ textarea[type="text"]:focus{
   outline:none;
   border-color:#2c3e50;
   border-color:var(--color-primary);
-  box-shadow:0 0 1px #2c3e50;
-  box-shadow:0 0 1px var(--color-primary);
+  box-shadow:0 0 10px #2c3e50;
+  box-shadow:0 0 10px var(--color-primary);
 }
 input.error:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]),
 textarea.error{

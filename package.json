@@ -1,6 +1,6 @@
 {
   "name": "naf-css",
-  "version": "1.0.0",
+  "version": "0.0.1-alpha",
   "description": "A lightweight, progressive, PostCSS thingy.",
   "main": "build.js",
   "scripts": {
