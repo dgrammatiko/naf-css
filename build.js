@@ -56,7 +56,8 @@ process.stdout.write(kleur.blue(`Compress:           ${parseBoolean(options.comp
 olderBrowsersInputFiles.forEach( file => {
   const flags = {
     minify: true,
-    minOpts: minifySettings
+    minOpts: minifySettings,
+    isIE: true
   }
   compile(file, flags, oldBrowserSettings)
 })

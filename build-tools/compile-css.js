@@ -9,14 +9,14 @@ module.exports.run = (file, flags, opts) => {
         fs.readFileSync(`${file}.pcss`, 'utf8'),
         { from: undefined, removeAll: true }
       ).then((result) => {
-        fs.writeFileSync(`${file.replace('src', 'css')}.css`, result.css);
-        process.stdout.write(kleur.green(`File ${file.replace('src', 'css')}.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n");
+        fs.writeFileSync(`${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.css`, result.css);
+        process.stdout.write(kleur.green(`File ${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n");
 
         if (flags.minify) {
             // Minify
             postcss(flags.minOpts).process(result.css, { from: undefined }).then((r) => {
-            fs.writeFileSync(`${file.replace('src', 'css')}.min.css`, r.css);
-            process.stdout.write(kleur.green(`File ${file.replace('src', 'css')}.min.css [Brotli-size=${brotliSize.sync(r.css)}, GZip-size=${gzipSize.sync(r.css)}, Uncompressed-size=${r.css.length}] was created succesfully 👍 `) + "\n");
+            fs.writeFileSync(`${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.min.css`, r.css);
+            process.stdout.write(kleur.green(`File ${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.min.css [Brotli-size=${brotliSize.sync(r.css)}, GZip-size=${gzipSize.sync(r.css)}, Uncompressed-size=${r.css.length}] was created succesfully 👍 `) + "\n");
             });
         }
       });
