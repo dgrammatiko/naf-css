@@ -37,6 +37,7 @@ li + li{
 }
 ::selection{
   background-color:#2c3e50;
+  background-color:#2c3e50;
   background-color:var(--color-primary);
   color:#fff;
   text-shadow:none;
@@ -103,7 +104,7 @@ textarea,
 }
 html{
   cursor:default;
-  font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Segoe UI, Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   line-height:1.15;
   tab-size:4;
@@ -111,14 +112,19 @@ html{
   -webkit-text-size-adjust:100%;
   word-break:break-word;
     background-color:#ffffff;
+    background-color:#ffffff;
     background-color:var(--background-color, white);
 }
 body{
   letter-spacing:0.01em;
   line-height:1.6;
   font-size:1.6rem;
+  font-size:1.6rem;
   font-size:var(--font-size);
   font-weight:100;
+  font-family:-apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   font-family:-apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
@@ -161,6 +167,7 @@ blockquote{
   background-color:#f3f3f6;
   padding:1.5rem 2rem;
   border-left:1rem solid #2c3e50;
+  border-left:1rem solid #2c3e50;
   border-left:1rem solid var(--color-primary);
   overflow:auto;
 }
@@ -188,14 +195,17 @@ hr{
 
   border:none;
   background-color:#2c3e50;
+  background-color:#2c3e50;
   background-color:var(--color-primary);
 }
 a{
   background-color:transparent;
   color:#2c3e50;
+  color:#2c3e50;
   color:var(--color-primary);
 }
 a:focus, a:hover{
+  color:#c0392b;
   color:#c0392b;
   color:var(--color-danger);
 }
@@ -245,9 +255,11 @@ th{
 }
 thead{
   border-bottom:2px solid #2c3e50;
+  border-bottom:2px solid #2c3e50;
   border-bottom:2px solid var(--color-primary);
 }
 tfoot{
+  border-top:2px solid #2c3e50;
   border-top:2px solid #2c3e50;
   border-top:2px solid var(--color-primary);
 }
@@ -368,10 +380,13 @@ button{
   padding:1rem 2.5rem;
   background-color:transparent;
   color:#2c3e50;
+  color:#2c3e50;
   color:var(--color-primary);
   border-radius:4px;
   border:1px solid #2c3e50;
+  border:1px solid #2c3e50;
   border:1px solid var(--color-primary);
+  font-size:1.6rem;
   font-size:1.6rem;
   font-size:var(--font-size);
   line-height:1;
@@ -410,10 +425,13 @@ button:not([disabled]):hover,
 [role="button"]:focus,
 button:not([disabled]):focus{
   background-color:#2c3e50;
+  background-color:#2c3e50;
   background-color:var(--color-primary);
   color:#fff;
   border:1px solid #2c3e50;
+  border:1px solid #2c3e50;
   border:1px solid var(--color-primary);
+  box-shadow:0 0 10px #2c3e50;
   box-shadow:0 0 10px #2c3e50;
   box-shadow:0 0 10px var(--color-primary);
 }
@@ -447,10 +465,12 @@ button[disabled]{
   background-color:transparent;
   border-color:transparent;
   color:#2c3e50;
+  color:#2c3e50;
   color:var(--color-primary);
 }
 fieldset{
   padding:0.35em 0.75em 0.625em;
+  border:1px solid #2c3e50;
   border:1px solid #2c3e50;
   border:1px solid var(--color-primary);
 }
@@ -464,6 +484,7 @@ textarea[type="text"]{
   font-family:inherit;
   padding:0.8rem 1rem;
   border-radius:4px;
+  border:1px solid #2c3e50;
   border:1px solid #2c3e50;
   border:1px solid var(--color-primary);
   font-size:1em;
@@ -486,12 +507,14 @@ select[readonly],
 textarea[readonly],
 textarea[type="text"][readonly]{
     border-color:#bdc3c7;
+    border-color:#bdc3c7;
     border-color:var(--color-grey);
 }
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]):not[disabled]:hover,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]):not([disabled]):hover,
 select:hover,
 textarea:hover,
 textarea[type="text"]:hover{
+  border-color:#bdc3c7;
   border-color:#bdc3c7;
   border-color:var(--color-grey);
 }
@@ -501,7 +524,9 @@ textarea:focus,
 textarea[type="text"]:focus{
   outline:none;
   border-color:#2c3e50;
+  border-color:#2c3e50;
   border-color:var(--color-primary);
+  box-shadow:0 0 10px #2c3e50;
   box-shadow:0 0 10px #2c3e50;
   box-shadow:0 0 10px var(--color-primary);
 }
@@ -511,6 +536,7 @@ textarea.error{
 }
 input.success:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]),
 textarea.success{
+  border-color:#27ae60;
   border-color:#27ae60;
   border-color:var(--color-success);
 }
