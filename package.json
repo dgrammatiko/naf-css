@@ -21,7 +21,7 @@
     "cssnano": "4.1.10",
     "fs": "0.0.2",
     "gzip-size": "5.0.0",
-    "kleur": "2.0.2",
+    "kleur": "3.0.2",
     "postcss": "7.0.14",
     "postcss-cli": "6.0.1",
     "postcss-custom-media": "7.0.7",
@@ -30,12 +30,12 @@
     "postcss-discard-comments": "4.0.2",
     "postcss-easy-import": "3.0.0",
     "postcss-import": "12.0.1",
-    "postcss-mixins": "6.2.0",
+    "postcss-mixins": "6.2.1",
     "postcss-nested": "4.1.2",
     "postcss-nesting": "7.0.0",
     "postcss-preset-env": "6.6.0",
     "postcss-syntax": "0.36.2",
-    "stylelint": "9.7.1",
+    "stylelint": "9.10.1",
     "stylelint-config-recommended": "2.1.0"
   },
   "params": {
