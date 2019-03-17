@@ -26,6 +26,7 @@ const parseBoolean = (value) => {
  */
 const olderBrowsersInputFiles = [
   './src/critical',
+  './src/critical-form',
   './src/lazy'
 ]
 

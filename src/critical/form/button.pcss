@@ -53,12 +53,10 @@ button:not([disabled]):hover,
 [role="button"]:focus,
 button:not([disabled]):focus {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-background);
   border: 1px solid var(--color-primary);
   box-shadow: 0 0 10px var(--color-primary);
 }
-
-
 
 .grouped {
   display: flex;
@@ -86,9 +84,9 @@ button:not([disabled]):focus {
 [type="reset"][disabled],
 [type="submit"][disabled],
 button[disabled] {
-  background-color: #f6f6f6;
-  color: #333;
-  border-color: #f6f6f6;
+  background-color: var(--color-grey);
+  color: var(--colour-black);
+  border-color: var(--color-grey);
 }
 
 [role="button"].clear:not([disabled]) {

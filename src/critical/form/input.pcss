@@ -10,6 +10,8 @@ textarea[type="text"] {
   padding: 0.8rem 1rem;
   border-radius: 4px;
   border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-background);
   font-size: 1em;
   transition: all 0.2s ease;
   display: block;
@@ -31,14 +33,19 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type=
 select[readonly],
 textarea[readonly],
 textarea[type="text"][readonly] {
-    border-color: var(--color-grey);
+  border-color: var(--color-grey);
+  background-color: var(--color-grey);
+  color: var(--color-black);
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]):not([disabled]):hover,
 select:hover,
 textarea:hover,
 textarea[type="text"]:hover {
-  border-color: var(--color-grey);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]):focus,
@@ -48,6 +55,8 @@ textarea[type="text"]:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 10px var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
 input.error:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="color"]):not([type="button"]):not([type="reset"]),
@@ -67,5 +76,5 @@ textarea.success {
 }
 
 ::placeholder {
-  color: #bdbfc4;
+  color: var(--color-background);
 }
