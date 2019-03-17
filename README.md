@@ -1,6 +1,8 @@
 # naf-css
 ## Not Another [css] Framework
 
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+
 ## What is this?
 Obviously **not** another CSS framework. If you need a CSS framework you're in the wrong place, navigate away immediately!
 This is a glorified normalise.css with some twists:
