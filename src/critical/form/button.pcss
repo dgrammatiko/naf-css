@@ -90,7 +90,16 @@ button[disabled] {
 }
 
 [role="button"].clear:not([disabled]) {
+  text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
   color: var(--color-primary);
+}
+
+[role="button"].clear:not([disabled]):hover,
+[role="button"].clear:not([disabled]):focus {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-background);
 }

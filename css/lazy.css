@@ -11,12 +11,6 @@ button.success:not([disabled]), .btn.success:not([disabled]){
   color:var(--color-success);
   border-color:var(--color-success);
 }
-[role="button"].clear:hover:not([disabled]), [role="button"].clear:focus:not([disabled]){
-  text-decoration:underline;
-  background-color:transparent;
-  border-color:transparent;
-  color:var(--color-primary);
-}
 .btn.warning:not([disabled]):hover,
 .btn.warning:not([disabled]):focus,
 button.warning:not([disabled]):hover,
