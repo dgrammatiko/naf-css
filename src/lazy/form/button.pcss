@@ -1,3 +1,53 @@
+.btn + .btn {
+  margin-left: 1rem;
+}
+
+.grouped {
+  display: flex;
+}
+
+.grouped > input:not(:last-child),
+.grouped > .btn:not(:last-child) {
+  margin-right: 16px;
+}
+
+.btn.icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn.icon > svg {
+  margin-left: 2px;
+}
+.btn.icon-only {
+  padding: 1rem;
+}
+
+.btn[disabled],
+[type="button"][disabled],
+[type="reset"][disabled],
+[type="submit"][disabled],
+button[disabled] {
+  background-color: var(--color-grey);
+  color: var(--colour-black);
+  border-color: var(--color-grey);
+}
+
+[role="button"].clear:not([disabled]) {
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-primary);
+}
+
+[role="button"].clear:not([disabled]):hover,
+[role="button"].clear:not([disabled]):focus {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-background);
+}
+
 button.danger:not([disabled]),
 .btn.danger:not([disabled]) {
   color: var(--color-danger);

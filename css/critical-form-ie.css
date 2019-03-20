@@ -75,7 +75,6 @@ textarea{
 :-moz-focusring{
   outline:1px dotted ButtonText;
 }
-.btn,
 [type="button"],
 [type="reset"],
 [type="submit"],
@@ -100,23 +99,17 @@ button{
 button{
   -webkit-appearance:button;
 }
-.btn + .btn{
-  margin-left:1rem;
-}
-.btn:active,
 [type="button"]:active,
 [type="reset"]:active,
 [type="submit"]:active,
 button:active{
   transform:scale(0.98);
 }
-.btn:not([disabled]):hover,
 [type="button"]:hover,
 [type="reset"]:hover,
 [type="submit"]:hover,
 [role="button"]:hover,
 button:not([disabled]):hover,
-.btn:not([disabled]):focus,
 [type="button"]:focus,
 [type="reset"]:focus,
 [type="submit"]:focus,
@@ -126,45 +119,6 @@ button:not([disabled]):focus{
   color:var(--color-background);
   border:1px solid var(--color-primary);
   box-shadow:0 0 10px var(--color-primary);
-}
-.grouped{
-  display:flex;
-}
-.grouped > input:not(:last-child),
-.grouped > .btn:not(:last-child){
-  margin-right:16px;
-}
-.btn.icon{
-  display:inline-flex;
-  align-items:center;
-}
-.btn.icon > svg{
-  margin-left:2px;
-}
-.btn.icon-only{
-  padding:1rem;
-}
-.btn[disabled],
-[type="button"][disabled],
-[type="reset"][disabled],
-[type="submit"][disabled],
-button[disabled]{
-  background-color:var(--color-grey);
-  color:var(--colour-black);
-  border-color:var(--color-grey);
-}
-[role="button"].clear:not([disabled]){
-  text-decoration:underline;
-  background-color:transparent;
-  border-color:transparent;
-  color:var(--color-primary);
-}
-[role="button"].clear:not([disabled]):hover,
-[role="button"].clear:not([disabled]):focus{
-  text-decoration:none;
-  background-color:var(--color-primary);
-  border-color:var(--color-primary);
-  color:var(--color-background);
 }
 fieldset{
   padding:0.35em 0.75em 0.625em;
