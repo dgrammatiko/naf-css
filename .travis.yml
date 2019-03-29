@@ -4,5 +4,5 @@ before_script:
   - gem install percy-cli
 script:
   - jekyll build
-  - percy snapshot _site/
+  - percy snapshot /kitchen-shink.html
   
