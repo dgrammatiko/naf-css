@@ -22,7 +22,7 @@
     "fs": "0.0.2",
     "gzip-size": "5.1.0",
     "kleur": "3.0.3",
-    "postcss": "7.0.14",
+    "postcss": "7.0.15",
     "postcss-cli": "6.1.2",
     "postcss-custom-media": "7.0.8",
     "postcss-custom-properties": "8.0.10",
