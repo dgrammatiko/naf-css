@@ -5,8 +5,8 @@
  * 
  * License MIT
  */
-const package = require('./package.json');
-const options = package.params;
+const pkg = require('./package.json');
+const options = pkg.params;
 const kleur = require('kleur');
 const minifySettings = require('./build-tools/minify-settings').default
 const oldBrowserSettings = require('./build-tools/compatibility-settings').default
@@ -34,6 +34,8 @@ const olderBrowsersInputFiles = [
  * 
  */
 const newBrowsersInputFiles = [
+  './src/critical',
+  './src/critical-form',
   './src/lazy'
 ]
 
@@ -54,7 +56,7 @@ process.stdout.write(kleur.blue(`CustomSelectors:    ${parseBoolean(options.cust
 process.stdout.write(kleur.blue(`Sourcemaps:         ${parseBoolean(options.sourcemaps) === true ? kleur.green('true  ✅\n') : kleur.green('false ❌\n')}`));
 process.stdout.write(kleur.blue(`Compress:           ${parseBoolean(options.compress) === true ? kleur.green('true  ✅\n') : kleur.green('false ❌\n')}`));
 
-olderBrowsersInputFiles.forEach( file => {
+olderBrowsersInputFiles.forEach(file => {
   const flags = {
     minify: true,
     minOpts: minifySettings,
@@ -63,7 +65,7 @@ olderBrowsersInputFiles.forEach( file => {
   compile(file, flags, oldBrowserSettings)
 })
 
-newBrowsersInputFiles.forEach( file => {
+newBrowsersInputFiles.forEach(file => {
   const flags = {
     minify: true,
     minOpts: minifySettings

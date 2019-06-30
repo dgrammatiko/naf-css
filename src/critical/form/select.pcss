@@ -1,9 +1,12 @@
-select:not([multiple]) {
+select {
   margin: 0;
   -webkit-appearance: none;
-  background: var(--color-primary) no-repeat 100%;
-  color: var(--color-background);
+  background: transparent no-repeat 100%;
+  color: var(--color-primary);
   background-size: 1ex;
   background-origin: content-box;
+}
+
+select:not([multiple]) {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='40' fill='#555'><polygon points='0,0 60,0 30,40'/></svg>");
 }

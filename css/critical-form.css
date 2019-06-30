@@ -90,7 +90,8 @@ button{
   text-align:center;
   transition:opacity 0.2s ease;
   text-decoration:none;
-  transform:scale(1);
+  -webkit-transform:scale(1);
+          transform:scale(1);
   display:inline-block;
 }
 [type="button"],
@@ -103,7 +104,8 @@ button{
 [type="reset"]:active,
 [type="submit"]:active,
 button:active{
-  transform:scale(0.98);
+  -webkit-transform:scale(0.98);
+          transform:scale(0.98);
 }
 [type="button"]:hover,
 [type="reset"]:hover,
@@ -193,7 +195,13 @@ textarea.success{
   width:1.6rem;
   height:1.6rem;
 }
+::-webkit-input-placeholder{
+  color:var(--color-primary);
+}
 :-ms-input-placeholder{
+  color:var(--color-primary);
+}
+::-ms-input-placeholder{
   color:var(--color-primary);
 }
 ::placeholder{

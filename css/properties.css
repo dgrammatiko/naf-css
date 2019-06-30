@@ -1,9 +1,9 @@
 :root {
-	--color-background: #1b1b1b;
-	--color-primary: #cfba58;
-	--color-primary-hover: #f0efd1;
-	--color-selection: #073642;
-	--color-grey: #bdc3c7;
+	--color-background: #fff;
+	--color-primary: #2a2a2a;
+	--color-primary-hover: #7e7e7e;
+	--color-selection: #7e7e7e;
+	--color-grey: #7e7e7e;
 	--colour-black: #000000;
 	--color-danger: #dc322f;
 	--color-success: #859900;

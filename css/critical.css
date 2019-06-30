@@ -59,7 +59,6 @@ li + li{
 }
 ::selection{
   background-color:#2a2a2a;
-  background-color:#2a2a2a;
   background-color:var(--color-primary);
   color:#fff;
   text-shadow:none;
@@ -129,14 +128,14 @@ html{
   font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Segoe UI, Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   line-height:1.15;
-  tab-size:4;
+  -moz-tab-size:4;
+  -o-tab-size:4;
+     tab-size:4;
   -ms-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
   word-break:break-word;
     background-color:#fff;
-    background-color:#fff;
     background-color:var(--color-background);
-    color:#2a2a2a;
     color:#2a2a2a;
     color:var(--color-primary)
 }
@@ -144,12 +143,8 @@ body{
   letter-spacing:0.01em;
   line-height:1.6;
   font-size:1.6rem;
-  font-size:1.6rem;
   font-size:var(--font-size);
   font-weight:100;
-  font-family:-apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
   font-family:-apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
@@ -190,10 +185,8 @@ main{
 }
 blockquote{
   background-color:#fff;
-  background-color:#fff;
   background-color:var(--color-background);
   padding:1.5rem 2rem;
-  border-left:1rem solid #2a2a2a;
   border-left:1rem solid #2a2a2a;
   border-left:1rem solid var(--color-primary);
   overflow:auto;
@@ -222,20 +215,16 @@ hr{
 
   border:none;
   background-color:#2a2a2a;
-  background-color:#2a2a2a;
   background-color:var(--color-primary);
 }
 a{
   background-color:transparent;
   color:#2a2a2a;
-  color:#2a2a2a;
   color:var(--color-primary);
 }
 a:focus, a:hover{
   background-color:#2a2a2a;
-  background-color:#2a2a2a;
   background-color:var(--color-primary);
-  color:#fff;
   color:#fff;
   color:var(--color-background);
 }
@@ -256,12 +245,10 @@ kbd{
   color:#d43939;
   padding:0.2em 0.4em;
   background-color:#fff;
-  background-color:#fff;
   background-color:var(--color-background);
 }
 pre{
   font-family:Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Oxygen Mono, Liberation Mono, monospace;
-  background-color:#fff;
   background-color:#fff;
   background-color:var(--color-background);
   font-size:1em;
@@ -289,11 +276,9 @@ th{
 }
 thead{
   border-bottom:2px solid #2a2a2a;
-  border-bottom:2px solid #2a2a2a;
   border-bottom:2px solid var(--color-primary);
 }
 tfoot{
-  border-top:2px solid #2a2a2a;
   border-top:2px solid #2a2a2a;
   border-top:2px solid var(--color-primary);
 }
@@ -304,7 +289,8 @@ p{
 }
 abbr[title], .abbr{
   text-decoration:underline;
-  text-decoration:underline dotted;
+  -webkit-text-decoration:underline dotted;
+          text-decoration:underline dotted;
   text-transform:uppercase;
 }
 small,
