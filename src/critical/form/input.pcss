@@ -44,14 +44,14 @@ textarea[type="text"]:hover {
   color: var(--color-primary);
 }
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):focus,
-select:focus,
-textarea:focus,
-textarea[type="text"]:focus,
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):hover,
 select:hover,
 textarea:hover,
-textarea[type="text"]:hover {
+textarea[type="text"]:hover,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):focus,
+select:focus,
+textarea:focus,
+textarea[type="text"]:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 10px var(--color-primary);
