@@ -36,7 +36,7 @@
     "postcss-preset-env": "6.7.0",
     "postcss-syntax": "0.36.2",
     "stylelint": "11.0.0",
-    "stylelint-config-recommended": "2.2.0"
+    "stylelint-config-recommended": "3.0.0"
   },
   "params": {
     "browsers": [
