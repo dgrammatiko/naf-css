@@ -2,7 +2,9 @@
 ## Not Another [css] Framework
 
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdgrammatiko%2Fnaf-css.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdgrammatiko%2Fnaf-css?ref=badge_shield)
+
+
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/naf-css/naf-css)
 
 ## What is this?
 Obviously **not** another CSS framework. If you need a CSS framework you're in the wrong place, navigate away immediately!
