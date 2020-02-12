@@ -34,7 +34,7 @@
     "postcss-nested": "4.2.1",
     "postcss-nesting": "7.0.1",
     "postcss-preset-env": "6.7.0",
-    "postcss-normalize": "^8.0.1",
+    "postcss-normalize": "8.0.1",
     "postcss-syntax": "0.36.2",
     "stylelint": "13.1.0",
     "stylelint-config-recommended": "3.0.0"
