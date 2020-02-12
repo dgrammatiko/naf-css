@@ -5,7 +5,7 @@
   "main": "build.js",
   "scripts": {
     "lint": "npx stylelint \"src/**/*.pcss\"",
-    "build": "node build.js"
+    "build": "npm run lint && node build.js"
   },
   "repository": {
     "type": "git",
