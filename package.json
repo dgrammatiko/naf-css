@@ -1,11 +1,11 @@
 {
   "name": "naf-css",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "description": "A lightweight, progressive, PostCSS thingy.",
   "main": "build.js",
   "scripts": {
     "lint": "npx stylelint \"src/**/*.pcss\"",
-    "build": "npm run lint && node build.js"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "postcss-mixins": "6.2.1",
     "postcss-nested": "4.1.2",
     "postcss-nesting": "7.0.0",
+    "postcss-normalize": "^8.0.1",
     "postcss-preset-env": "6.6.0",
     "postcss-syntax": "0.36.2",
     "stylelint": "10.1.0",

@@ -6,6 +6,7 @@
  * License MIT
  */
 module.exports.default = [
+  require('postcss-normalize')({ browsers: 'last 2 versions' }),
   require('postcss-easy-import')({ extensions: '.pcss' }),
   require('postcss-mixins'),
   require('postcss-custom-selectors'),
@@ -14,7 +15,7 @@ module.exports.default = [
   require('postcss-custom-media'),
   require('postcss-discard-comments')({ removeAll: true }),
   require('postcss-preset-env')({
-      autoprefixer: {
+    autoprefixer: {
       grid: true,
       browsers: "last 1 version",
       from: undefined,

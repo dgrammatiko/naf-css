@@ -60,7 +60,7 @@ olderBrowsersInputFiles.forEach(file => {
   const flags = {
     minify: true,
     minOpts: minifySettings,
-    isIE: true
+    isIE: true,
   }
   compile(file, flags, oldBrowserSettings)
 })
