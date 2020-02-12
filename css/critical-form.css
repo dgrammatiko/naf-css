@@ -451,25 +451,25 @@ textarea[type="text"][readonly]{
   color:var(--color-primary);
 }
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([disabled]):hover,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):hover,
 select:hover,
 textarea:hover,
-textarea[type="text"]:hover{
+textarea[type="text"]:hover,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):focus,
+select:focus,
+textarea:focus,
+textarea[type="text"]:focus{
+  outline:none;
   border-color:var(--color-primary);
   box-shadow:0 0 10px var(--color-primary);
   background-color:transparent;
   color:var(--color-primary);
 }
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):focus,
-select:focus,
-textarea:focus,
-textarea[type="text"]:focus,
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):hover,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([disabled]):hover,
 select:hover,
 textarea:hover,
 textarea[type="text"]:hover{
-  outline:none;
   border-color:var(--color-primary);
   box-shadow:0 0 10px var(--color-primary);
   background-color:transparent;
@@ -490,11 +490,31 @@ textarea.success{
   color:var(--color-primary);
 }
 
+::-moz-placeholder{
+  color:var(--color-primary);
+}
+
 :-ms-input-placeholder{
   color:var(--color-primary);
 }
 
 ::-ms-input-placeholder{
+  color:var(--color-primary);
+}
+
+undefined{
+  color:var(--color-primary);
+}
+
+undefined{
+  color:var(--color-primary);
+}
+
+undefined{
+  color:var(--color-primary);
+}
+
+undefined{
   color:var(--color-primary);
 }
 

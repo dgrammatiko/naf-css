@@ -6,7 +6,7 @@
  * License MIT
  */
 module.exports.default = [
-  require('postcss-normalize')({ browsers: 'ie 11' }),
+  require('postcss-normalize')({ overrideBrowserslist: 'ie 11' }),
   require('postcss-easy-import')({ extensions: '.pcss' }),
   require('postcss-mixins'),
   require('postcss-custom-selectors'),
@@ -20,7 +20,7 @@ module.exports.default = [
   require('postcss-preset-env')({
     autoprefixer: {
       grid: true,
-      browsers: "ie 11",
+      overrideBrowserslist: "ie 11",
       from: undefined,
     },
     features: {
