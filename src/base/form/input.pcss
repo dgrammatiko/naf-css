@@ -35,11 +35,11 @@ textarea[type="text"][readonly] {
   color: var(--color-primary);
 }
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):hover,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([disabled]):hover,
 select:hover,
 textarea:hover,
 textarea[type="text"]:hover,
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):focus,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([disabled]):focus,
 select:focus,
 textarea:focus,
 textarea[type="text"]:focus {
@@ -50,7 +50,7 @@ textarea[type="text"]:focus {
   color: var(--color-primary);
 }
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([disabled]):hover,
+/* input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([disabled]):hover,
 select:hover,
 textarea:hover,
 textarea[type="text"]:hover {
@@ -58,7 +58,7 @@ textarea[type="text"]:hover {
   box-shadow: 0 0 10px var(--color-primary);
   background-color: transparent;
   color: var(--color-primary);
-}
+} */
 
 input.error:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]),
 textarea.error {
