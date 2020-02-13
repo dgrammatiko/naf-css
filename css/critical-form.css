@@ -41,13 +41,12 @@ input{
 [type="submit"],
 [role="button"],
 button{
-  -webkit-appearance:button;
   overflow:visible;
   text-transform:none;
   padding:1rem 2.5rem;
   background-color:transparent;
   color:var(--color-primary);
-  border-radius:4px;
+  border-radius:var(--border-radius);
   border:1px solid var(--color-primary);
   font-size:var(--font-size);
   line-height:1;
@@ -71,15 +70,15 @@ button:active{
   -webkit-transform:scale(0.98);
           transform:scale(0.98);
 }
-[type="button"]:hover,
-[type="reset"]:hover,
-[type="submit"]:hover,
-[role="button"]:hover,
+[type="button"]:not([disabled]):hover,
+[type="reset"]:not([disabled]):hover,
+[type="submit"]:not([disabled]):hover,
+[role="button"]:not([disabled]):hover,
 button:not([disabled]):hover,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus,
-[role="button"]:focus,
+[type="button"]:not([disabled]):focus,
+[type="reset"]:not([disabled]):focus,
+[type="submit"]:not([disabled]):focus,
+[role="button"]:not([disabled]):focus,
 button:not([disabled]):focus{
   background-color:var(--color-primary);
   color:var(--color-background);
@@ -89,6 +88,7 @@ button:not([disabled]):focus{
 fieldset{
   padding:0.35em 0.75em 0.625em;
   border:1px solid var(--color-primary);
+  border-radius:var(--border-radius);
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]),
 select,
@@ -96,7 +96,7 @@ textarea,
 textarea[type="text"]{
   font-family:inherit;
   padding:0.8rem 1rem;
-  border-radius:4px;
+  border-radius:var(--border-radius);
   border:1px solid var(--color-primary);
   background-color:transparent;
   color:var(--color-primary);
@@ -110,6 +110,8 @@ button[disabled],
 input[disabled]:hover,
 button[disabled]:hover{
   cursor:not-allowed;
+  -webkit-filter:blur(1px);
+          filter:blur(1px);
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"])[disabled],
 select[disabled],

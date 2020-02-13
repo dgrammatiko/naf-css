@@ -4,7 +4,7 @@ textarea,
 textarea[type="text"] {
   font-family: inherit;
   padding: 0.8rem 1rem;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   border: 1px solid var(--color-primary);
   background-color: transparent;
   color: var(--color-primary);
@@ -19,6 +19,7 @@ button[disabled],
 input[disabled]:hover,
 button[disabled]:hover {
   cursor: not-allowed;
+  filter: blur(1px);
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"])[disabled],
