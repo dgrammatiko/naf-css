@@ -16,7 +16,7 @@
   "devDependencies": {
     "cssnano": "4.1.10",
     "kleur": "3.0.3",
-    "postcss": "7.0.26",
+    "postcss": "7.0.27",
     "postcss-cli": "7.1.0",
     "postcss-discard-comments": "4.0.2",
     "postcss-import": "^12.0.1",
