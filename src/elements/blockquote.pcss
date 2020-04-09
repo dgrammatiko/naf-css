@@ -1,0 +1,33 @@
+blockquote {
+  background-color: var(--secondary-transparent);
+  border-radius: var(--border-radius);
+  display: block;
+  margin: var(--line-height) 1rem var(--line-height) 1rem;
+  max-width: 80ch;
+  overflow: hidden;
+  padding: 1rem;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+blockquote::before {
+  color: hsla(var(--secondaryH), var(--secondaryS), var(--secondaryL), 0.15);
+  content: open-quote;
+  font-family: "Times New Roman", "Times", serif;
+  font-size: 5rem;
+  left: 0.25rem;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+  text-indent: 2rem;
+}
+
+blockquote > :last-child {
+  float: right;
+  margin-bottom: 0;
+}

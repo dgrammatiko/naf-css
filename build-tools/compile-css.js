@@ -13,7 +13,7 @@ const kleur = require('kleur');
 
 module.exports.run = (file, flags, opts) => {
   postcss(opts).process(
-      fs.readFileSync(`${file}.pcss`, 'utf8'),
+      fs.readFileSync(`${process.cwd()}/${file}.pcss`, 'utf8'),
       { from: undefined, removeAll: true })
   .then((result) => {
       fs.writeFileSync(`${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.css`, result.css);

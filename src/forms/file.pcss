@@ -1,0 +1,39 @@
+/* file inputs */
+
+input[type=file] {
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  font-size: inherit;
+  font-size: var(--font-size);
+  line-height: inherit;
+  max-width: auto;
+  min-height: 2.5rem;
+  min-width: auto;
+  overflow: visible;
+  padding: 0 1rem;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  background-color: var(--primary-transparent);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  transform: scale(1);
+  transition: opacity .2s ease;
+}
+
+input[type=file]:disabled,
+input[type=file][aria-disabled] {
+  cursor: not-allowed;
+}
+
+input[type=file]:focus,
+input[type=file]:hover, {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+  color: var(--primary-bg);
+  transform: scale(0.98);
+}

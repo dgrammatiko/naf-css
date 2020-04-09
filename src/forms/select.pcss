@@ -1,0 +1,52 @@
+/* select */
+select {
+  -webkit-appearance: none;
+  background: transparent no-repeat 100%;
+  background-origin: content-box;
+  background-size: 1ex;
+  color: var(--primary);
+  margin: 0;
+  text-transform: none;
+}
+
+select:not([multiple]) {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='40' fill='var(--primary)'><polygon points='0,0 60,0 30,40'/></svg>");
+}
+
+option {
+  align-items: center;
+  border: 0;
+  border-radius: 0;
+  display: flex;
+  font-weight: var(--font-weight-normal);
+  justify-content: flex-start;
+}
+
+option:hover,
+option:focus {
+  background: var(--primary-lighter);
+  border: 0;
+}
+
+select[multiple] {
+  min-height: 10rem;
+  padding: 0;
+}
+
+select[multiple] option:checked {
+  background: var(--secondary-light);
+  color: var(--primary-dark);
+}
+
+select[multiple] option:checked:focus,
+select[multiple] option:checked:hover, {
+  background: var(--primary);
+  color: var(--primary-dark);
+}
+
+optgroup {
+  border: 0;
+  border-radius: 0;
+  font-weight: var(--font-weight-bolder);
+  padding: 0.5rem;
+}

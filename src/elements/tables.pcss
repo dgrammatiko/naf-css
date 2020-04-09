@@ -1,0 +1,32 @@
+table {
+  background-color: var(--secondary-bg);
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead {
+  box-shadow: inset 0 -2px var(--primary);
+}
+
+tfoot {
+  box-shadow: inset 0 2px var(--primary);
+}
+
+
+tbody tr:nth-child(even) {
+  background-color: var(--secondary-transparent);
+  color: var(--secondary);
+  /* background-color: var(--primary); */
+}
+
+td,
+th {
+  padding: 1rem 0.5rem;
+  vertical-align: top;
+}
+
+th {
+  font-weight: var(--font-weight-bolder);
+}

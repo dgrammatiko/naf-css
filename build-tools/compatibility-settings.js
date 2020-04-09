@@ -6,8 +6,9 @@
  * License MIT
  */
 module.exports.default = [
-  require('postcss-normalize')({ overrideBrowserslist: 'ie 11' }),
-  require('postcss-easy-import')({ extensions: '.pcss' }),
+  // require('postcss-normalize')({ overrideBrowserslist: 'ie 11' }),
+  // require('postcss-easy-import')({ extensions: '.pcss' }),
+  require("postcss-import"),
   require('postcss-mixins'),
   require('postcss-custom-selectors'),
   require('postcss-nesting'),

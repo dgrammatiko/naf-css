@@ -1,0 +1,123 @@
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"],
+button {
+  background-color: var(--primary-transparent);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  display: inline-block;
+  font-size: var(--font-size);
+  line-height: 1;
+  overflow: visible;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transform: scale(1);
+  transition: opacity 0.2s ease;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+
+[type="button"]:active,
+[type="reset"]:active,
+[type="submit"]:active,
+button:active {
+  transform: scale(0.98);
+}
+
+[type="button"]:not([disabled]):hover,
+[type="reset"]:not([disabled]):hover,
+[type="submit"]:not([disabled]):hover,
+[role="button"]:not([disabled]):hover,
+button:not([disabled]):hover,
+[type="button"]:not([disabled]):focus,
+[type="reset"]:not([disabled]):focus,
+[type="submit"]:not([disabled]):focus,
+[role="button"]:not([disabled]):focus,
+button:not([disabled]):focus {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+  color: var(--primary-bg);
+}
+
+/* buttons 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  color: var(--primary-bg);
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: inherit;
+  max-width: auto;
+  min-height: 2.5rem;
+  min-width: auto;
+  overflow: visible;
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+input[type="reset"] {
+  background-color: var(--primary-bg);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button[disabled],
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled],
+button:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled {
+  background: var(--secondary-lighter);
+  color: var(--secondary-light);
+}
+
+input[type="reset"]:disabled,
+input[type="reset"][disabled] {
+  background: var(--secondary-lighter);
+  border: 1px solid transparent;
+  color: var(--secondary-light);
+}
+
+button:not(:disabled):not([disabled]):hover,
+input[type="button"]:not(:disabled):not([disabled]):hover,
+input[type="reset"]:not(:disabled):not([disabled]):hover,
+input[type="submit"]:not(:disabled):not([disabled]):hover {
+  background-color: var(--primary-dark);
+  border: 1px solid transparent;
+}
+
+input[type="reset"]:not(:disabled):not([disabled]):hover {
+  background-color: var(--primary-lighter);
+}
+
+
+
+*/

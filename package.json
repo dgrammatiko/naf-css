@@ -1,10 +1,10 @@
 {
   "name": "naf-css",
-  "version": "0.0.2-alpha",
-  "description": "A lightweight, progressive, PostCSS thingy.",
-  "main": "build.js",
+  "version": "0.0.7",
+  "description": "A lightweight, progressive, PostCSS, glorified reset thingy.",
   "scripts": {
     "lint": "npx stylelint \"src/**/*.pcss\"",
+    "lint:fix": "npx stylelint \"src/**/*.pcss\" --fix",
     "build": "npm run lint && node build.js"
   },
   "repository": {
@@ -13,40 +13,18 @@
   },
   "author": "Dimitris Grammatikogiannis <d.grammatiko@gmail.com> (dgrammatiko.online)",
   "license": "MIT",
-  "dependencies": {
-    "sanitize.css": "^11.0.0"
-  },
   "devDependencies": {
-    "brotli-size": "4.0.0",
     "cssnano": "4.1.10",
-    "fs": "0.0.2",
-    "gzip-size": "5.1.1",
     "kleur": "3.0.3",
     "postcss": "7.0.26",
     "postcss-cli": "7.1.0",
-    "postcss-custom-media": "7.0.8",
-    "postcss-custom-properties": "9.0.2",
-    "postcss-custom-selectors": "5.1.2",
     "postcss-discard-comments": "4.0.2",
-    "postcss-easy-import": "3.0.0",
-    "postcss-import": "12.0.1",
+    "postcss-import": "^12.0.1",
     "postcss-mixins": "6.2.3",
-    "postcss-nested": "4.2.1",
     "postcss-nesting": "7.0.1",
     "postcss-preset-env": "6.7.0",
-    "postcss-normalize": "8.0.1",
-    "postcss-syntax": "0.36.2",
     "stylelint": "13.1.0",
-    "stylelint-config-recommended": "3.0.0"
-  },
-  "params": {
-    "browserslist": [
-      "last 1 version"
-    ],
-    "customProperties": "true",
-    "colorFunction": "true",
-    "customSelectors": "true",
-    "sourcemaps": "false",
-    "compress": "true"
+    "stylelint-config-recommended": "3.0.0",
+    "stylelint-order": "^4.0.0"
   }
 }
