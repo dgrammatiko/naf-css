@@ -1,14 +1,4 @@
 /**
- * Inherit styling in all browsers (opinionated).
- */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-}
-
-/**
  * Remove the margin in Safari.
  */
 button,
@@ -27,6 +17,16 @@ input {
  */
 input {
   overflow: visible;
+}
+
+/**
+ * Inherit styling in all browsers (opinionated).
+ */
+input:not([type="range"]),
+select,
+textarea {
+  -webkit-appearance: none;
+  font-family: inherit;
 }
 
 /**
@@ -76,3 +76,17 @@ input {
   outline: 1px dotted ButtonText;
 }
 
+
+button, select,
+input[type='submit'],
+input[type='button'],
+input[type='checkbox'],
+input[type='range'],
+input[type='radio'] {
+  cursor: pointer;
+}
+
+input:not([type='checkbox']):not([type='radio']):not([type="submit"]):not([type="reset"]):not([type="button"]):not([role="button"]),
+select {
+  display: block;
+}
