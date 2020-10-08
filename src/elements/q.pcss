@@ -1,13 +1,13 @@
-q {
+q:not([class]) {
   font-style: italic;
 }
 
-q::before {
+q:not([class])::before {
   content: open-quote;
   font-style: normal;
 }
 
-q::after {
+q:not([class])::after {
   content: close-quote;
   font-style: normal;
 }

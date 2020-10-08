@@ -1,14 +1,14 @@
-ul,
-ol {
+ul:not([class]),
+ol:not([class]) {
   margin: var(--line-height) 0;
   padding-left: 2rem;
 }
-ul ul,
-ol ol {
+ul:not([class]) ul:not([class]),
+ol:not([class]) ol:not([class]) {
   margin: 0;
 }
 
-li {
+li:not([class]) {
   font-size: 1rem;
   line-height: var(--line-height);
   max-width: 80ch;
