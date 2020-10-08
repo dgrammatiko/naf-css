@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "npx stylelint \"src/**/*.pcss\"",
     "lint:fix": "npx stylelint \"src/**/*.pcss\" --fix",
-    "build": "npm run lint && node build.js"
+    "build": "npm run lint && node build.js",
+    "update:browserlist": "npx browserslist@latest --update-db"
   },
   "repository": {
     "type": "git",
