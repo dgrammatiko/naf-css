@@ -36,7 +36,7 @@
     "postcss-preset-env": "6.7.0",
     "postcss-normalize": "9.0.0",
     "postcss-syntax": "0.36.2",
-    "stylelint": "13.7.2",
+    "stylelint": "13.8.0",
     "stylelint-config-recommended": "3.0.0"
   },
   "params": {
