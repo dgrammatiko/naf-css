@@ -90,8 +90,7 @@ button:not([class]),
   text-align:center;
   text-decoration:none;
   text-transform:none;
-  -webkit-transform:scale(1);
-          transform:scale(1);
+  transform:scale(1);
   transition:opacity 0.2s ease;
 }
 [type="button"]:not([class]),
@@ -109,8 +108,7 @@ button:not([class]) + button:not([class]){
 [type="submit"]:not([class]):active,
 button:not([class]):active,
 .button:active{
-  -webkit-transform:scale(0.98);
-          transform:scale(0.98);
+  transform:scale(0.98);
 }
 [type="button"]:not([class]):not([disabled]):hover,
 [type="reset"]:not([class]):not([disabled]):hover,
@@ -181,9 +179,7 @@ input[type="time"]:not([class]){
   padding:0 2.5rem;
 }
 input[type="search"]:not([class]){
-  -webkit-appearance:textfield;
-  -moz-appearance:textfield;
-       appearance:textfield;
+  appearance:textfield;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M36,36 20,20' stroke='%23ccc' stroke-width='3' /><circle cx='15' cy='15' r='14' fill='white' stroke='%23ccc' stroke-width='2' /></svg>");
   padding:0 2.5rem;
 }
@@ -209,7 +205,6 @@ input[type="number"]:not([class])::-webkit-outer-spin-button{
 }
 input[type="search"]:not([class])::-webkit-search-cancel-button,
 input[type="search"]:not([class])::-webkit-search-decoration{
-  -webkit-appearance:none;
   appearance:none;
 }
 input[type="radio"]:not([class]),
@@ -307,14 +302,12 @@ textarea:not([class]){
 }
 [type="checkbox"]:not([class]):not(:checked) + label:not([class]):after{
   opacity:0;
-  -webkit-transform:scale(0);
-          transform:scale(0);
+  transform:scale(0);
 }
 [type="checkbox"]:not([class]):checked + label:not([class]):after{
   background:var(--primary);
   opacity:1;
-  -webkit-transform:scale(1);
-          transform:scale(1);
+  transform:scale(1);
 }
 [type="checkbox"]:not([class]):disabled:not(:checked) + label:not([class]):before,
 [type="checkbox"]:not([class]):disabled:checked + label:not([class]):before{
@@ -398,8 +391,7 @@ input[type="file"]:not([class]){
   border:1px solid var(--primary);
   border-radius:var(--border-radius);
   color:var(--primary);
-  -webkit-transform:scale(1);
-          transform:scale(1);
+  transform:scale(1);
   -webkit-transition:opacity 0.2s ease;
   transition:opacity 0.2s ease;
 }
@@ -413,8 +405,7 @@ input[type="file"]:not([class]):hover{
   border:1px solid var(--primary);
   box-shadow:0 0 10px var(--primary);
   color:var(--primary-bg);
-  -webkit-transform:scale(0.98);
-          transform:scale(0.98);
+  transform:scale(0.98);
 }
 progress:not([class]){
   display:inline-block;
