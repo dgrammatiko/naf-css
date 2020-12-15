@@ -1,8 +1,8 @@
 @import "modern-css-reset";
 
-@import "base/_html.css";
-@import "base/_body.css";
-@import "base/_pseudo.css";
+@import "base/html.css";
+@import "base/body.css";
+@import "base/pseudo.css";
 
 @import "elements/h-tags.css";
 @import "elements/lists.css";
