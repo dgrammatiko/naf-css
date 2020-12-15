@@ -1,8 +1,8 @@
-[type="button"],
-[type="reset"],
-[type="submit"],
-[role="button"],
-button,
+[type="button"]:not([class]),
+[type="reset"]:not([class]),
+[type="submit"]:not([class]),
+[role="button"]:not([class]),
+button:not([class]),
 .button {
   background-color: var(--primary-transparent);
   border: 1px solid var(--primary);
@@ -20,37 +20,37 @@ button,
   transition: opacity 0.2s ease;
 }
 
-[type="button"],
-[type="reset"],
-[type="submit"],
-button,
+[type="button"]:not([class]),
+[type="reset"]:not([class]),
+[type="submit"]:not([class]),
+button:not([class]),
 .button {
   -webkit-appearance: none;
 }
 
-button + button {
+button:not([class]) + button:not([class]) {
   margin: auto 0.5rem;
 }
 
-[type="button"]:active,
-[type="reset"]:active,
-[type="submit"]:active,
-button:active,
+[type="button"]:not([class]):active,
+[type="reset"]:not([class]):active,
+[type="submit"]:not([class]):active,
+button:not([class]):active,
 .button:active {
   transform: scale(0.98);
 }
 
-[type="button"]:not([disabled]):hover,
-[type="reset"]:not([disabled]):hover,
-[type="submit"]:not([disabled]):hover,
-[role="button"]:not([disabled]):hover,
-button:not([disabled]):hover,
+[type="button"]:not([class]):not([disabled]):hover,
+[type="reset"]:not([class]):not([disabled]):hover,
+[type="submit"]:not([class]):not([disabled]):hover,
+[role="button"]:not([class]):not([disabled]):hover,
+button:not([class]):not([disabled]):hover,
 .button:not([disabled]):hover,
-[type="button"]:not([disabled]):focus,
-[type="reset"]:not([disabled]):focus,
-[type="submit"]:not([disabled]):focus,
-[role="button"]:not([disabled]):focus,
-button:not([disabled]):focus,
+[type="button"]:not([class]):not([disabled]):focus,
+[type="reset"]:not([class]):not([disabled]):focus,
+[type="submit"]:not([class]):not([disabled]):focus,
+[role="button"]:not([class]):not([disabled]):focus,
+button:not([class]):not([disabled]):focus,
 .button:not([disabled]):focus {
   background-color: var(--primary);
   border: 1px solid var(--primary);

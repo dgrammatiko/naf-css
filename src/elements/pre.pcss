@@ -1,11 +1,11 @@
-pre {
+pre:not([class]) {
   font-family: var(--font-family-mono);
   font-size: 1em;
   margin: var(--line-height) 0;
   max-width: 100%;
   overflow: auto;
 }
-pre > code {
+pre:not([class]) > code:not([class]) {
   display: block;
   font-size: 1rem;
   line-height: 1.5rem;

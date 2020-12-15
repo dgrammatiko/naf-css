@@ -1,5 +1,5 @@
 /* file input */
-input[type="file"] {
+input[type="file"]:not([class]) {
   cursor: pointer;
   display: block;
   font: inherit;
@@ -23,13 +23,13 @@ input[type="file"] {
   transition: opacity 0.2s ease;
 }
 
-input[type="file"]:disabled,
-input[type="file"][aria-disabled] {
+input[type="file"]:not([class]):disabled,
+input[type="file"][aria-disabled]:not([class]) {
   cursor: not-allowed;
 }
 
-input[type="file"]:focus,
-input[type="file"]:hover {
+input[type="file"]:not([class]):focus,
+input[type="file"]:not([class]):hover {
   background-color: var(--primary);
   border: 1px solid var(--primary);
   box-shadow: 0 0 10px var(--primary);

@@ -1,4 +1,4 @@
-table {
+table:not([class]) {
   background-color: var(--secondary-bg);
   border: 0;
   border-collapse: collapse;
@@ -6,26 +6,26 @@ table {
   width: 100%;
 }
 
-thead {
+thead:not([class]) {
   box-shadow: inset 0 -2px var(--primary);
 }
 
-tfoot {
+tfoot:not([class]) {
   box-shadow: inset 0 2px var(--primary);
 }
 
-tbody tr:nth-child(even) {
+tbody:not([class]) tr:nth-child(even):not([class]) {
   background-color: var(--secondary-transparent);
   color: var(--secondary);
 }
 
-td,
-th {
+td:not([class]),
+th:not([class]) {
   padding: 1rem 0.5rem;
   text-align: left;
   vertical-align: top;
 }
 
-th {
+th:not([class]) {
   font-weight: var(--font-weight-bolder);
 }

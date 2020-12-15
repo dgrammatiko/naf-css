@@ -1,15 +1,15 @@
-sub,
-sup {
+sub:not([class]),
+sup:not([class]) {
   font-size: 0.75em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-sup {
+sup:not([class]) {
   top: -0.5em;
 }
 
-sub {
+sub:not([class]) {
   bottom: -0.25em;
 }

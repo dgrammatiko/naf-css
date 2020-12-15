@@ -1,5 +1,5 @@
 /* select */
-select {
+select:not([class]) {
   -webkit-appearance: none;
   background: transparent no-repeat 100%;
   background-origin: content-box;
@@ -9,11 +9,11 @@ select {
   text-transform: none;
 }
 
-select:not([multiple]) {
+select:not([multiple]):not([class]) {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='40' fill='var(--primary)'><polygon points='0,0 60,0 30,40'/></svg>");
 }
 
-option {
+option:not([class]) {
   align-items: center;
   border: 0;
   border-radius: 0;
@@ -22,29 +22,29 @@ option {
   justify-content: flex-start;
 }
 
-option:hover,
-option:focus {
+option:not([class]):hover,
+option:not([class]):focus {
   background: var(--primary-lighter);
   border: 0;
 }
 
-select[multiple] {
+select[multiple]:not([class]) {
   min-height: 10rem;
   padding: 0;
 }
 
-select[multiple] option:checked {
+select[multiple]:not([class]) option:not([class]):checked {
   background: var(--secondary-light);
   color: var(--primary-dark);
 }
 
-select[multiple] option:checked:focus,
-select[multiple] option:checked:hover {
+select[multiple]:not([class]) option:not([class]):checked:focus,
+select[multiple]:not([class]) option:not([class]):checked:hover {
   background: var(--primary);
   color: var(--primary-dark);
 }
 
-optgroup {
+optgroup:not([class]) {
   border: 0;
   border-radius: 0;
   font-weight: var(--font-weight-bolder);

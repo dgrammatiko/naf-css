@@ -1,4 +1,4 @@
-blockquote {
+blockquote:not([class]) {
   background-color: var(--secondary-transparent);
   border-radius: var(--border-radius);
   display: block;
@@ -10,7 +10,7 @@ blockquote {
   position: relative;
 }
 
-blockquote::before {
+blockquote:not([class])::before {
   color: hsla(var(--secondaryH), var(--secondaryS), var(--secondaryL), 0.15);
   content: open-quote;
   font-family: "Times New Roman", "Times", serif;
@@ -22,12 +22,12 @@ blockquote::before {
   z-index: -1;
 }
 
-blockquote > :first-child {
+blockquote:not([class]) > :first-child {
   margin-top: 0;
   text-indent: 2rem;
 }
 
-blockquote > :last-child {
+blockquote:not([class]) > :last-child {
   float: right;
   margin-bottom: 0;
 }
