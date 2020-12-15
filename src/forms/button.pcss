@@ -2,7 +2,8 @@
 [type="reset"],
 [type="submit"],
 [role="button"],
-button, .button {
+button,
+.button {
   background-color: var(--primary-transparent);
   border: 1px solid var(--primary);
   border-radius: var(--border-radius);
@@ -22,14 +23,20 @@ button, .button {
 [type="button"],
 [type="reset"],
 [type="submit"],
-button, .button {
+button,
+.button {
   -webkit-appearance: none;
+}
+
+button + button {
+  margin: auto 0.5rem;
 }
 
 [type="button"]:active,
 [type="reset"]:active,
 [type="submit"]:active,
-button:active, .button:active {
+button:active,
+.button:active {
   transform: scale(0.98);
 }
 
@@ -44,77 +51,12 @@ button:not([disabled]):hover,
 [type="submit"]:not([disabled]):focus,
 [role="button"]:not([disabled]):focus,
 button:not([disabled]):focus,
-.button:not([disabled]):hover,{
+.button:not([disabled]):focus {
   background-color: var(--primary);
   border: 1px solid var(--primary);
   box-shadow: 0 0 10px var(--primary);
   color: var(--primary-bg);
-}
-
-/* buttons 
-button,
-.button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: none;
-  appearance: button;
-  background-color: var(--primary);
-  border: 1px solid transparent;
-  border-radius: var(--border-radius);
-  box-sizing: border-box;
-  color: var(--primary-bg);
-  cursor: pointer;
-  display: inline-block;
-  font-size: inherit;
-  font-weight: inherit;
-  max-width: auto;
-  min-height: 2.5rem;
-  min-width: auto;
-  overflow: visible;
-  padding: 0 1rem;
-  text-decoration: none;
-}
-
-input[type="reset"] {
-  background-color: var(--primary-bg);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-}
-
-button[disabled],
-.button[disabled],
-input[type="button"][disabled],
-input[type="reset"][disabled],
-input[type="submit"][disabled],
-button:disabled,
-input[type="button"]:disabled,
-input[type="reset"]:disabled,
-input[type="submit"]:disabled {
-  background: var(--secondary-lighter);
-  color: var(--secondary-light);
-}
-
-input[type="reset"]:disabled,
-input[type="reset"][disabled] {
-  background: var(--secondary-lighter);
-  border: 1px solid transparent;
-  color: var(--secondary-light);
-}
-
-button:not(:disabled):not([disabled]):hover,
-.button:not(:disabled):not([disabled]):hover,
-input[type="button"]:not(:disabled):not([disabled]):hover,
-input[type="reset"]:not(:disabled):not([disabled]):hover,
-input[type="submit"]:not(:disabled):not([disabled]):hover {
-  background-color: var(--primary-dark);
-  border: 1px solid transparent;
-}
-
-input[type="reset"]:not(:disabled):not([disabled]):hover {
-  background-color: var(--primary-lighter);
+  cursor: not-allowed;
 }
 
 
-
-*/
