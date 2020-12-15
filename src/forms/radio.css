@@ -1,3 +1,8 @@
+/* hover style just for information */
+label:not([class]):hover:before {
+  border: 2px solid #4778d9 !important;
+}
+
 /* Base for label styling */
 [type="checkbox"]:not([class]):not(:checked),
 [type="checkbox"]:not([class]):checked {
@@ -62,9 +67,4 @@
 [type="checkbox"]:not([class]):checked:focus + label:not([class]):before,
 [type="checkbox"]:not([class]):not(:checked):focus + label:not([class]):before {
   border: 2px dotted blue;
-}
-
-/* hover style just for information */
-label:not([class]):hover:before {
-  border: 2px solid #4778d9 !important;
 }

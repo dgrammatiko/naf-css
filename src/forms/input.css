@@ -111,6 +111,7 @@ input[type="range"]:not([class]) {
   padding: 0;
 }
 
+/* stylelint-disable */
 input:not([type="file"]):not([class]):invalid,
 optgroup:not([class]):invalid,
 option:not([class]):invalid,
@@ -142,6 +143,7 @@ textarea:not([disabled]):not([class]):focus {
   border: 1px solid var(--secondary);
   box-shadow: 0 0 10px var(--primary);
 }
+/* stylelint-enable */
 
 input:not([type="file"]):not([type="image"]):not(:invalid):not(:disabled):not([disabled]):not([readonly]):not([class]):hover,
 textarea:not(:invalid):not(:disabled):not([disabled]):not([readonly]):not([class]):hover,

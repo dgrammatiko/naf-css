@@ -28,16 +28,16 @@ button:not([class]),
   -webkit-appearance: none;
 }
 
-button:not([class]) + button:not([class]) {
-  margin: auto 0.5rem;
-}
-
 [type="button"]:not([class]):active,
 [type="reset"]:not([class]):active,
 [type="submit"]:not([class]):active,
 button:not([class]):active,
 .button:active {
   transform: scale(0.98);
+}
+
+button:not([class]) + button:not([class]) {
+  margin: auto 0.5rem;
 }
 
 [type="button"]:not([class]):not([disabled]):hover,
