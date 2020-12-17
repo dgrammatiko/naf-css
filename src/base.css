@@ -1,9 +1,12 @@
 @import "modern-css-reset";
 
-@import "base/html.css";
+@import "base/*.css";
+/*
 @import "base/body.css";
 @import "base/pseudo.css";
-
+*/
+@import "elements/*.css";
+/*
 @import "elements/h-tags.css";
 @import "elements/lists.css";
 @import "elements/tables.css";
@@ -33,3 +36,4 @@
 @import "elements/svg.css";
 @import "elements/var.css";
 @import "elements/video.css";
+*/

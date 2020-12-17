@@ -10,9 +10,11 @@
   --secondary-bg: #fff;
 
   /* Font */
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", 'Inter', "Helvetica Neue", sans-serif;
+  --font-family-main: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", 'Inter', "Helvetica Neue", sans-serif;
+  --font-family-alt1: var(--font-family-alt1);
+  --font-family-alt2: var(--font-family-alt1);
   --font-family-mono: Menlo, Consolas, "Roboto Mono", "Ubuntu Monospace", "Oxygen Mono", "Liberation Mono", monospace;
-  --font-size-root: 16px;
+  --font-size-root: 1rem;
   --font-weight-bolder: 700;
   --font-weight-bold: 400;
   --font-weight-normal: 200;

@@ -5,6 +5,7 @@ h4:not([class]),
 h5:not([class]),
 h6:not([class]) {
   color: var(--primary);
+  font-family: var(--font-family-alt1);
   font-weight: var(--font-weight-bold);
   margin: var(--heading-margin);
 }

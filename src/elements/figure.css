@@ -1,11 +1,10 @@
 figure:not([class]) {
-  display: block;
+  display: inline-flex;
+  flex-direction: column;
   margin: var(--line-height) 0;
-  padding: 1rem;
 }
 
-figcaption:not([class]) {
-  font-size: 0.875rem;
-  font-style: italic;
-  margin-left: 1rem;
+figure:not([class]) figcaption:not([class]) {
+  margin: 0;
+  padding: .75rem 1.5rem;
 }

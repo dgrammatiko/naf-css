@@ -1,9 +1,7 @@
 code:not([class]) {
   background: var(--secondary-transparent);
+  border-radius: 6px;
   color: var(--secondary-lighter);
-  display: inline-block;
-  font-family: var(--font-family-mono);
   font-size: 1em;
-  font-weight: var(--font-weight-bold);
-  padding: 0 0.25rem;
+  padding: 2.5px 5px;
 }

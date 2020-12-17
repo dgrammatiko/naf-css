@@ -34,13 +34,13 @@ select[multiple]:not([class]) {
 }
 
 select[multiple]:not([class]) option:not([class]):checked {
-  background: var(--secondary-light);
+  background: var(--primary-lighter);
   color: var(--primary-dark);
 }
 
 select[multiple]:not([class]) option:not([class]):checked:focus,
 select[multiple]:not([class]) option:not([class]):checked:hover {
-  background: var(--primary);
+  background: var(--primary-lighter);
   color: var(--primary-dark);
 }
 

@@ -1,6 +1,6 @@
 mark:not([class]) {
   background-color: var(--primary-bright);
-  border-left: 4px solid var(--primary-bright);
-  border-right: 4px solid var(--primary-bright);
+  border-radius: 2px;
   color: var(--secondary-darker);
+  padding: 0 2px 0 2px;
 }

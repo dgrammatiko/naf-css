@@ -28,8 +28,8 @@ input[type="file"][aria-disabled]:not([class]) {
   cursor: not-allowed;
 }
 
-input[type="file"]:not([class]):focus,
-input[type="file"]:not([class]):hover {
+input[type="file"]:not([class])::-webkit-file-upload-button:focus,
+input[type="file"]:not([class])::-webkit-file-upload-button:hover {
   background-color: var(--primary);
   border: 1px solid var(--primary);
   box-shadow: 0 0 10px var(--primary);
