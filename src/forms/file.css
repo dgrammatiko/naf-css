@@ -11,9 +11,15 @@ input[type="file"]:not([class]) {
   overflow: visible;
   padding: 0 1rem;
   width: 100%;
+
+  &:disabled,
+  &[aria-disabled] {
+    cursor: not-allowed;
+  }
 }
 
-::-webkit-file-upload-button {
+input[type=file]:not([class])::-webkit-file-selector-button,
+input[type=file]:not([class])::-webkit-file-upload-button {
   -webkit-appearance: button;
   background-color: var(--primary-transparent);
   border: 1px solid var(--primary);
@@ -21,18 +27,13 @@ input[type="file"]:not([class]) {
   color: var(--primary);
   transform: scale(1);
   transition: opacity 0.2s ease;
-}
 
-input[type="file"]:not([class]):disabled,
-input[type="file"][aria-disabled]:not([class]) {
-  cursor: not-allowed;
-}
-
-input[type="file"]:not([class])::-webkit-file-upload-button:focus,
-input[type="file"]:not([class])::-webkit-file-upload-button:hover {
-  background-color: var(--primary);
-  border: 1px solid var(--primary);
-  box-shadow: 0 0 10px var(--primary);
-  color: var(--primary-bg);
-  transform: scale(0.98);
+  &:focus,
+  &:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    color: var(--primary-bg);
+    transform: scale(0.98);
+  }
 }

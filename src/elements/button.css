@@ -34,27 +34,13 @@ button:not([class]) {
     }
   }
 
+  &:not([disabled]):focus,
   &:not([disabled]):hover {
     background-color: var(--primary);
     border: 1px solid var(--primary);
     box-shadow: 0 0 10px var(--primary);
     color: var(--primary-bg);
     cursor: pointer;
+    outline: 0;
   }
 }
-
-
-
-/*
-button:not([class]) + button:not([class]) {
-  margin: auto 0.5rem;
-}
-
-[type="button"]:disabled,
-[type="reset"]:disabled,
-[type="submit"]:disabled,
-[role="button"]:disabled,
-button:disabled {
-
-}
-*/

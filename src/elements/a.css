@@ -1,23 +1,26 @@
 a:not([class]),
-a:link:not([class]),
-a:active:not([class]),
-a:focus:not([class]) {
+a:link:not([class]) {
   background-color: transparent;
   color: var(--primary);
   font-weight: var(--font-weight-bold);
   text-decoration: underline;
-}
 
-a:visited:not([class]) {
-  color: var(--primary-dark);
-}
+  /* stylelint-disable no-descending-specificity */
+  &:visited {
+    color: var(--primary-dark);
+  }
 
-a:hover:not([class]),
-a:visited:not([class]):hover,
-a:active:not([class]):hover {
-  background-color: var(--primary-dark);
-  color: var(--primary-bg);
-  text-decoration: none;
+  &:hover,
+  &:focus {
+    background-color: var(--primary-dark);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--primary);
+    color: var(--primary-bg);
+    outline: 0;
+    padding: .2rem;
+    text-decoration: none;
+  }
+  /* stylelint-enable no-descending-specificity */
 }
 
 a[href^='mailto:']:not([class])::before,

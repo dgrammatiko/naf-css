@@ -50,22 +50,25 @@ input[type="radio"]{
   top:auto !important;
   width:1px !important;
 }a:not([class]),
-a:link:not([class]),
-a:active:not([class]),
-a:focus:not([class]){
+a:link:not([class]){
   background-color:transparent;
   color:var(--primary);
   font-weight:var(--font-weight-bold);
-  text-decoration:underline;
-}a:visited:not([class]){
-  color:var(--primary-dark);
-}a:hover:not([class]),
-a:visited:not([class]):hover,
-a:active:not([class]):hover{
-  background-color:var(--primary-dark);
-  color:var(--primary-bg);
-  text-decoration:none;
-}a[href^='mailto:']:not([class])::before,
+  text-decoration:underline
+}a:not([class]):visited,a:link:not([class]):visited{
+    color:var(--primary-dark);
+  }a:not([class]):hover,
+  a:not([class]):focus,
+  a:link:not([class]):hover,
+  a:link:not([class]):focus{
+    background-color:var(--primary-dark);
+    border-radius:var(--border-radius);
+    box-shadow:0 0 10px var(--primary);
+    color:var(--primary-bg);
+    outline:0;
+    padding:.2rem;
+    text-decoration:none;
+  }a[href^='mailto:']:not([class])::before,
 a[href^='tel:']:not([class])::before,
 a[href^='sms:']:not([class])::before,
 a[href^='file:']:not([class])::before,
@@ -161,12 +164,22 @@ button:not([class]){
     cursor:not-allowed
   }[type="button"]:not([class]):disabled:hover,[type="reset"]:not([class]):disabled:hover,[type="submit"]:not([class]):disabled:hover,[role="button"]:not([class]):disabled:hover,button:not([class]):disabled:hover{
       cursor:not-allowed;
-    }[type="button"]:not([class]):not([disabled]):hover,[type="reset"]:not([class]):not([disabled]):hover,[type="submit"]:not([class]):not([disabled]):hover,[role="button"]:not([class]):not([disabled]):hover,button:not([class]):not([disabled]):hover{
+    }[type="button"]:not([class]):not([disabled]):focus,
+  [type="button"]:not([class]):not([disabled]):hover,
+  [type="reset"]:not([class]):not([disabled]):focus,
+  [type="reset"]:not([class]):not([disabled]):hover,
+  [type="submit"]:not([class]):not([disabled]):focus,
+  [type="submit"]:not([class]):not([disabled]):hover,
+  [role="button"]:not([class]):not([disabled]):focus,
+  [role="button"]:not([class]):not([disabled]):hover,
+  button:not([class]):not([disabled]):focus,
+  button:not([class]):not([disabled]):hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
     box-shadow:0 0 10px var(--primary);
     color:var(--primary-bg);
     cursor:pointer;
+    outline:0;
   }canvas:not([class]){
   display:inline-block;
   max-width:100%;
@@ -252,11 +265,8 @@ hgroup:not([class]) h6:not([class]){
   border:0;
   display:block;
   max-width:100%;
-}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]),
-optgroup:not([class]),
-option:not([class]),
-textarea:not([class]),
-select:not([class]){
+}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]), textarea:not([class]), select:not([class]){
+  background-color:var(--secondary-lighter);
   border:1px solid var(--secondary-light);
   border-radius:var(--border-radius);
   box-sizing:border-box;
@@ -270,17 +280,23 @@ select:not([class]){
   padding:0 0.5rem;
   text-transform:none;
   width:100%
-}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):disabled,optgroup:not([class]):disabled,option:not([class]):disabled,textarea:not([class]):disabled,select:not([class]):disabled{
-    background:var(--secondary-lighter);
-    border:1px solid var(--secondary-lighter);
+}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):disabled,textarea:not([class]):disabled,select:not([class]):disabled{
+    background-color:var(--secondary-light);
+    border:1px solid var(--secondary-light);
     color:var(--secondary-bg);
     cursor:not-allowed;
-  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):not([disabled]):hover,optgroup:not([class]):not([disabled]):hover,option:not([class]):not([disabled]):hover,textarea:not([class]):not([disabled]):hover,select:not([class]):not([disabled]):hover{
-    border:1px solid var(--secondary);
+  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):focus,
+  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):hover,
+  textarea:not([class]):focus,
+  textarea:not([class]):hover,
+  select:not([class]):focus,
+  select:not([class]):hover{
+    border:2px solid var(--primary);
     box-shadow:0 0 10px var(--primary);
-  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):not([disabled])[readonly],optgroup:not([class]):not([disabled])[readonly],option:not([class]):not([disabled])[readonly],textarea:not([class]):not([disabled])[readonly],select:not([class]):not([disabled])[readonly]{
+    outline:0;
+  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class])[readonly],textarea:not([class])[readonly],select:not([class])[readonly]{
+    background-color:var(--secondary-light);
     border:1px solid var(--secondary);
-    box-shadow:0 0 10px var(--secondary);
   }kbd:not([class]){
   background-color:var(--secondary-lighter);
   border:1px solid var(--secondary-light);
