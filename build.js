@@ -18,5 +18,5 @@ const { compile } = require('./build-tools/compile-css');
     forExec.push(compile(`src/${file}`, {legacy: true}));
   });
 
-    Promise.all(forExec).catch(err => console.dir(err));
+  Promise.all(forExec).catch(err => console.dir(err));
 })();

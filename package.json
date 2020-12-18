@@ -1,6 +1,6 @@
 {
   "name": "naf-css",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "A lightweight, progressive, PostCSS, glorified reset thingy.",
   "main": "src/base.css",
   "scripts": {
