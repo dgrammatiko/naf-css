@@ -84,7 +84,17 @@ input[type="file"]:not([class]) {
 }
 
 input[type="color"]:not([class]) {
-  padding: 0.125rem;
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 5rem;
+
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  &::-webkit-color-swatch {
+    border: none;
+  }
 }
 
 input[type="range"]:not([class]) {

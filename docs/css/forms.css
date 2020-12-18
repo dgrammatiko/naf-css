@@ -134,8 +134,16 @@ input[type="file"]:not([class]){
   padding:0;
 }
 input[type="color"]:not([class]){
-  padding:0.125rem;
+  -webkit-appearance:none;
+  height:2rem;
+  width:5rem
 }
+input[type="color"]:not([class])::-webkit-color-swatch-wrapper{
+    padding:0;
+  }
+input[type="color"]:not([class])::-webkit-color-swatch{
+    border:none;
+  }
 input[type="range"]:not([class]){
   padding:0;
 }

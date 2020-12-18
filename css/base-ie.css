@@ -278,7 +278,7 @@ h6:not([class]){
   border:0;
   display:block;
   max-width:100%;
-}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]),
+}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]),
 textarea:not([class]),
 select:not([class]){
   background-color:var(--secondary-lighter);
@@ -295,8 +295,8 @@ select:not([class]){
   padding:0 0.5rem;
   text-transform:none;
   width:100%
-}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):disabled,
-  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class])[readonly],
+}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]):disabled,
+  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class])[readonly],
   textarea:not([class]):disabled,
   textarea:not([class])[readonly],
   select:not([class]):disabled,
@@ -305,8 +305,8 @@ select:not([class]){
     border:1px solid var(--secondary-light);
     color:var(--secondary-bg);
     cursor:not-allowed;
-  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):focus:not([disabled]):not([type="range"]),
-  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):hover:not([disabled]):not([type="range"]),
+  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]):focus:not([disabled]):not([type="range"]),
+  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]):hover:not([disabled]):not([type="range"]),
   textarea:not([class]):focus:not([disabled]):not([type="range"]),
   textarea:not([class]):hover:not([disabled]):not([type="range"]),
   select:not([class]):focus:not([disabled]):not([type="range"]),

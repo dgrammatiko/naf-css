@@ -1,4 +1,4 @@
-input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]),
+input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]),
 textarea:not([class]),
 select:not([class]) {
   background-color: var(--secondary-lighter);
