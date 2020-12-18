@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <div class="container" style="padding-left: 4rem; padding-right: 4rem;">
+    <div class="container" style="max-width: 60rem; margin-left: auto; margin-right: auto;">
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
@@ -285,18 +285,18 @@ P R E F O R M A T T E D T E X T
           style="margin-top: 1rem;"
         ></meter>
       </p>
-      <p>
+      <div>
         <button>Button</button>
         <button type="button">Button</button>
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
         <button type="button" disabled>Disabled</button>
-      </p>
+      </div>
       <form>
         <fieldset>
           <legend>Input fields</legend>
         </fieldset>
-        <p>
+        <div>
           <label for="text">Text Input</label>
           <input
             type="text"
@@ -305,8 +305,8 @@ P R E F O R M A T T E D T E X T
             placeholder="Enter text"
             required
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="disabled">Disabled Input</label>
           <input
             type="text"
@@ -315,8 +315,8 @@ P R E F O R M A T T E D T E X T
             placeholder="Enter text"
             disabled
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="text">Read-only Input</label>
           <input
             type="text"
@@ -325,8 +325,8 @@ P R E F O R M A T T E D T E X T
             placeholder="Enter text"
             readonly
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="password">Password</label>
           <input
             type="password"
@@ -334,8 +334,8 @@ P R E F O R M A T T E D T E X T
             name="password"
             placeholder="••••••••"
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="url">Web Address</label>
           <input
             type="url"
@@ -343,8 +343,8 @@ P R E F O R M A T T E D T E X T
             name="url"
             placeholder="http://yoursite.com"
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="email">Email Address</label>
           <input
             type="email"
@@ -352,12 +352,12 @@ P R E F O R M A T T E D T E X T
             name="email"
             placeholder="name@email.com"
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="tel">Phone Number</label>
           <input type="tel" id="tel" name="tel" placeholder="(999) 999-9999" />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="search">Search</label>
           <input
             type="search"
@@ -365,20 +365,20 @@ P R E F O R M A T T E D T E X T
             name="search"
             placeholder="Enter search term"
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="number">Number Input</label>
           <input type="number" id="number" name="number" placeholder="1234" />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="date">Date Input</label>
           <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="Time">Time Input</label>
           <input type="time" id="time" name="time" placeholder="--:-- --" />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="month">Month Input</label>
           <input
             type="month"
@@ -386,8 +386,8 @@ P R E F O R M A T T E D T E X T
             name="month"
             placeholder="--------- ----"
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="week">Week Input</label>
           <input
             type="week"
@@ -395,8 +395,8 @@ P R E F O R M A T T E D T E X T
             name="week"
             placeholder="Week --, ----"
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="datetime">Datetime Local Input</label>
           <input
             type="datetime-local"
@@ -404,8 +404,8 @@ P R E F O R M A T T E D T E X T
             name="datetime"
             placeholder="mm/dd/yyyy, --:-- --"
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="textarea">Text area</label>
           <textarea
             id="textarea"
@@ -413,8 +413,8 @@ P R E F O R M A T T E D T E X T
             rows="3"
             placeholder="Text area"
           ></textarea>
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="select">Select</label>
           <select id="select" name="select">
             <optgroup label="Option Group">
@@ -423,16 +423,16 @@ P R E F O R M A T T E D T E X T
               <option>Option 3</option>
             </optgroup>
           </select>
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="multi-select">Multi-select</label>
           <select multiple id="multi-select">
             <option>Option 1</option>
             <option>Option 2</option>
             <option>Option 3</option>
           </select>
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="datalist">Datalist</label>
           <input
             list="options"
@@ -445,7 +445,7 @@ P R E F O R M A T T E D T E X T
             <option value="Option 2"> </option>
             <option value="Option 3"> </option>
           </datalist>
-        </p>
+        </div>
         <fieldset>
           <legend>Fieldset legend</legend>
           <div class="checkbox">
@@ -508,7 +508,7 @@ P R E F O R M A T T E D T E X T
             <label for="radio-option3">Option 3</label>
           </div>
         </fieldset>
-        <p>
+        <div>
           <label for="range">Range</label>
           <input
             type="range"
@@ -518,8 +518,8 @@ P R E F O R M A T T E D T E X T
             max="500"
             step="10"
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="range-disabled">Disabled Range</label>
           <input
             type="range"
@@ -530,16 +530,16 @@ P R E F O R M A T T E D T E X T
             step="10"
             disabled
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="file">Upload File</label>
           <input type="file" id="file" name="file" />
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="color">Color</label>
           <input type="color" id="color" name="color" />
-        </p>
-        <p>Output: <output name="output" for="val1 val2">0</output></p>
+        </div>
+        <div>Output: <output name="output" for="val1 val2">0</output></p>
         <div>
           <input type="submit" value="Submit" />
           <input type="button" value="Button" />
