@@ -11,7 +11,6 @@ const { compile } = require('./build-tools/compile-css');
 
 (async () => {
   const forExec = [];
-  await new Promise(resolve => rimraf('docs', resolve));
   const files = await readdir('./src');
 
   files.forEach(file => {
@@ -21,6 +20,8 @@ const { compile } = require('./build-tools/compile-css');
   });
 
   Promise.all(forExec).catch(err => console.dir(err));
+
+  rimraf.sync('docs');
 
   await mkdir('docs/css', {recursive: true});
 
