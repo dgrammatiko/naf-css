@@ -5,7 +5,8 @@
  *
  * License MIT
  */
-const { readdir } = require('fs').promises;
+const { readdir, copyFile, mkdir } = require('fs').promises;
+const rimraf = require('rimraf');
 const { compile } = require('./build-tools/compile-css');
 
 (async () => {
@@ -17,6 +18,21 @@ const { compile } = require('./build-tools/compile-css');
     forExec.push(compile(`src/${file}`, {legacy: false}));
     forExec.push(compile(`src/${file}`, {legacy: true}));
   });
+
+  Promise.all(forExec).catch(err => console.dir(err));
+
+  await new Promise(resolve => rimraf('docs', resolve));
+  await mkdir('docs/css', {recursive: true});
+
+  forExec.length = 0;
+  const filesDist = await readdir('./css');
+
+  filesDist.forEach(file => {
+    forExec.push(copyFile(`css/${file}`, `docs/css/${file}`));
+  });
+
+  forExec.push(copyFile(`kitchen-shink.html`, `index.html`));
+  forExec.push(copyFile(`kitchen-shink2.html`, `index2.html`));
 
   Promise.all(forExec).catch(err => console.dir(err));
 })();
