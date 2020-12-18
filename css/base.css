@@ -70,7 +70,7 @@ a:link:not([class]){
     box-shadow:0 0 10px var(--primary);
     color:var(--primary-bg);
     outline:0;
-    padding:.2rem;
+    padding:.2rem 0;
     text-decoration:none;
   }a[href^='mailto:']:not([class])::before,
 a[href^='tel:']:not([class])::before,
