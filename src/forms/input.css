@@ -84,7 +84,9 @@ input[type="file"]:not([class]) {
 }
 
 input[type="color"]:not([class]) {
-  -webkit-appearance: none;
+  background: none;
+  border: none;
+  border-radius: var(--border-radius);
   height: 2rem;
   width: 5rem;
 
@@ -93,7 +95,14 @@ input[type="color"]:not([class]) {
   }
 
   &::-webkit-color-swatch {
-    border: none;
+    border: solid 1px var(--primary);
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 .5rem var(--primary);
+    outline: 0;
   }
 }
 

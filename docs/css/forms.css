@@ -134,7 +134,9 @@ input[type="file"]:not([class]){
   padding:0;
 }
 input[type="color"]:not([class]){
-  -webkit-appearance:none;
+  background:none;
+  border:none;
+  border-radius:var(--border-radius);
   height:2rem;
   width:5rem
 }
@@ -142,7 +144,13 @@ input[type="color"]:not([class])::-webkit-color-swatch-wrapper{
     padding:0;
   }
 input[type="color"]:not([class])::-webkit-color-swatch{
-    border:none;
+    border:solid 1px var(--primary);
+  }
+input[type="color"]:not([class]):hover,
+  input[type="color"]:not([class]):focus{
+    border:2px solid var(--primary);
+    box-shadow:0 0 .5rem var(--primary);
+    outline:0;
   }
 input[type="range"]:not([class]){
   padding:0;
