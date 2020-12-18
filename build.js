@@ -31,8 +31,8 @@ const { compile } = require('./build-tools/compile-css');
     forExec.push(copyFile(`css/${file}`, `docs/css/${file}`));
   });
 
-  forExec.push(copyFile(`kitchen-shink.html`, `index.html`));
-  forExec.push(copyFile(`kitchen-shink2.html`, `index2.html`));
+  forExec.push(copyFile(`kitchen-shink.html`, `docs/index.html`));
+  forExec.push(copyFile(`kitchen-shink2.html`, `docs/index2.html`));
 
   Promise.all(forExec).catch(err => console.dir(err));
 })();
