@@ -196,7 +196,8 @@ select:not([class]){
 select::-ms-expand{
   display:none;
 }
-select[multiple]{
+select:not([class])[multiple],
+select:not([class])[size]{
   background-image:none;
   height:auto;
   overflow-y:auto;

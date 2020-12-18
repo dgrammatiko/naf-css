@@ -4,12 +4,3 @@ hgroup:not([class]) {
   margin: var(--heading-margin);
   padding-left: 1rem;
 }
-
-hgroup:not([class]) h1:not([class]),
-hgroup:not([class]) h2:not([class]),
-hgroup:not([class]) h3:not([class]),
-hgroup:not([class]) h4:not([class]),
-hgroup:not([class]) h5:not([class]),
-hgroup:not([class]) h6:not([class]) {
-  margin: 0;
-}

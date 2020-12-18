@@ -251,13 +251,6 @@ h6:not([class]){
   display:block;
   margin:var(--heading-margin);
   padding-left:1rem;
-}hgroup:not([class]) h1:not([class]),
-hgroup:not([class]) h2:not([class]),
-hgroup:not([class]) h3:not([class]),
-hgroup:not([class]) h4:not([class]),
-hgroup:not([class]) h5:not([class]),
-hgroup:not([class]) h6:not([class]){
-  margin:0;
 }hr:not([class]){
   border:none;
   border-top:1px solid var(--secondary-light);
@@ -265,7 +258,9 @@ hgroup:not([class]) h6:not([class]){
   border:0;
   display:block;
   max-width:100%;
-}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]), textarea:not([class]), select:not([class]){
+}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]),
+textarea:not([class]),
+select:not([class]){
   background-color:var(--secondary-lighter);
   border:1px solid var(--secondary-light);
   border-radius:var(--border-radius);
