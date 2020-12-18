@@ -1,0 +1,6 @@
+hgroup:not([class]) {
+  border-left: 5px solid var(--primary);
+  display: block;
+  margin: var(--heading-margin);
+  padding-left: 1rem;
+}

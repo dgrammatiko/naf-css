@@ -1,0 +1,16 @@
+dl:not([class]) {
+  font-size: 1rem;
+  line-height: var(--line-height);
+  margin: var(--line-height) 0;
+  max-width: 80ch;
+}
+
+dt:not([class]) {
+  font-weight: var(--font-weight-bold);
+  margin-top: 1rem;
+}
+
+dd:not([class]) {
+  font-style: italic;
+  margin-left: 1rem;
+}

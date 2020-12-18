@@ -1,0 +1,46 @@
+[type="button"]:not([class]),
+[type="reset"]:not([class]),
+[type="submit"]:not([class]),
+[role="button"]:not([class]),
+button:not([class]) {
+  -webkit-appearance: none;
+  background-color: var(--primary-transparent);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  display: inline-block;
+  font-size: inherit;
+  line-height: 1;
+  overflow: visible;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transform: scale(1);
+  transition: opacity 0.2s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    background: var(--secondary-lighter);
+    border: 1px solid var(--secondary-lighter);
+    color: var(--secondary-bg);
+    cursor: not-allowed;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    color: var(--primary-bg);
+    cursor: pointer;
+    outline: 0;
+  }
+}

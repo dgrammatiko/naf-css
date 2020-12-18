@@ -1,0 +1,6 @@
+p:not([class]) {
+  font-size: 1rem;
+  line-height: var(--line-height);
+  margin: var(--line-height) 0;
+  max-width: 80ch;
+}

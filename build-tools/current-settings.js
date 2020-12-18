@@ -2,18 +2,17 @@
  * Build script
  *
  * Dimitris Grammatikogiannis November 2018
- * 
+ *
  * License MIT
  */
-module.exports.default = [
-  require('postcss-normalize')({ overrideBrowserslist: 'last 2 versions' }),
-  require('postcss-easy-import')({ extensions: '.pcss' }),
+module.exports.current = [
+  require('postcss-easy-import'),
   require('postcss-mixins'),
   require('postcss-custom-selectors'),
-  require('postcss-nesting'),
+  require('postcss-nested'),
   require('autoprefixer'),
   require('postcss-custom-media'),
-  require('postcss-discard-comments')({ removeAll: true }),
+  require('postcss-discard-comments'),
   require('postcss-preset-env')({
     autoprefixer: {
       grid: true,

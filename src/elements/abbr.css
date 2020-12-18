@@ -1,0 +1,19 @@
+abbr[title]:not([class]) {
+  border-bottom: 0;
+  position: relative;
+  text-decoration: underline dashed var(--primary);
+}
+
+abbr:hover:not([class])::after {
+  background: var(--primary);
+  border-radius: var(--border-radius);
+  bottom: 100%;
+  color: var(--primary-bg);
+  content: attr(title);
+  display: block;
+  left: 0;
+  padding: .5rem;
+  position: absolute;
+  width: 100px;
+  width: max-content;
+}

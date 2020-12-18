@@ -1,0 +1,7 @@
+progress:not([class]) {
+  display: inline-block;
+  max-width: 100%;
+  min-width: 15rem;
+  vertical-align: baseline;
+  width: 100%;
+}

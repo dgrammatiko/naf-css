@@ -1,0 +1,15 @@
+details:not([class]) {
+  border: 1px solid var(--secondary-light);
+  border-radius: var(--border-radius);
+  display: block;
+  padding: 0 1rem;
+}
+
+details:not([class]) summary:not([class]) {
+  margin: 0 -1rem;
+  padding: 1rem;
+}
+
+details[open]:not([class]) summary:not([class]) {
+  border-bottom: 1px solid var(--secondary-light);
+}

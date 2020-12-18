@@ -1,0 +1,31 @@
+{
+  "colours": {
+    "light": {
+      "primary": "#666666",
+      "primaryBackground": "#fff",
+      "secondary": "darkgrey",
+      "secondaryBackground": "#fff"
+    },
+    "dark": {
+      "primary": "#666666",
+      "primaryBackground": "#fff",
+      "secondary": "darkgrey",
+      "secondaryBackground": "#fff"
+    }
+  },
+  "font": {
+    "family": "Helvetica, Arial, sans-serif",
+    "sizeRoot": "16px",
+    "weightBolder": 700,
+    "weightBold": 400,
+    "weightNormal": 200,
+    "weightThin": 100
+  },
+  "lineHeight": "1.75rem",
+  "headingMargin": "1.5rem 0 1rem",
+  "borderRadius": "2px",
+  "error": "#d00",
+  "warning": "#ec0",
+  "info": "#369",
+  "correct": "#080"
+}

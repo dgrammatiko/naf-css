@@ -1,0 +1,7 @@
+textarea:not([class]) {
+  height: 5rem;
+  line-height: 1.5rem;
+  margin: 0;
+  overflow: auto;
+  resize: vertical;
+}

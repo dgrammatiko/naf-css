@@ -1,0 +1,16 @@
+blockquote:not([class]) {
+  background-color: var(--secondary-transparent);
+  border-left: 4px solid var(--primary);
+  font-style: italic;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+}
+
+blockquote:not([class]) > footer:not([class]) {
+  border: 0;
+  font-style: normal;
+}
+
+blockquote:not([class]) cite:not([class]) {
+  font-style: normal;
+}

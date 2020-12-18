@@ -1,0 +1,18 @@
+/**
+ * Remove the margin in Safari.
+ */
+button,
+input,
+select {
+  margin: 0.3rem 0;
+}
+
+button,
+select,
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="range"],
+input[type="radio"] {
+  cursor: pointer;
+}

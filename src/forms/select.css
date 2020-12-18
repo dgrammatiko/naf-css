@@ -1,0 +1,22 @@
+select:not([class]) {
+  background: var(--secondary-lighter) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='40' fill='var(--primary)'><polygon points='0,0 60,0 30,40'/></svg>")  calc(100% - 12px) 50% / 12px no-repeat;
+  border: 1px solid var(--secondary-light);
+  border-radius: var(--border-radius);
+  display: block;
+  font: inherit;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:not([class])[multiple],
+select:not([class])[size] {
+  background-image: none;
+  height: auto;
+  overflow-y: auto;
+  padding-right: .5rem;
+  padding-top: .5rem;
+}

@@ -1,0 +1,5 @@
+var:not([class]) {
+  font-family: var(--font-family-mono);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+}

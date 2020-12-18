@@ -1,0 +1,5 @@
+pre:not([class]) > code:not([class]) {
+  display: block;
+  overflow-x: auto;
+  padding: 10px;
+}

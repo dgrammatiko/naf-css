@@ -1,0 +1,7 @@
+svg:not(:root) {
+  display: inline-block;
+  font-size: inherit;
+  height: 1.2em;
+  overflow: visible;
+  vertical-align: -.2em;
+}

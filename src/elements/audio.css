@@ -1,0 +1,10 @@
+audio:not([class]) {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+audio:not([controls]):not([class]) {
+  display: none;
+  height: 0;
+}

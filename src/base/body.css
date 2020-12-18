@@ -1,0 +1,11 @@
+body {
+  font-family: var(--font-family-main);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: var(--line-height);
+  min-height: 100vh;
+  min-height: -moz-stretch;
+  min-height: -webkit-fill-stretch;
+  min-height: fill-stretch;
+  scroll-behavior: smooth;
+}

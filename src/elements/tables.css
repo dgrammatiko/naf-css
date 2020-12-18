@@ -1,0 +1,58 @@
+table:not([class]) {
+  background-color: var(--secondary-bg);
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead:not([class]) {
+  box-shadow: inset 0 -2px var(--primary);
+}
+
+tfoot:not([class]) {
+  box-shadow: inset 0 2px var(--primary);
+}
+
+caption {
+  caption-side: top;
+  padding: .5rem 0;
+  text-align: start;
+}
+
+td:not([class]),
+th:not([class]) {
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th:not([class]) {
+  background: rgba(100,100,100,.025);
+  font-weight: var(--font-weight-bolder);
+}
+
+tbody:not([class]) tr:nth-child(even):not([class]) {
+  background-color: var(--secondary-transparent);
+  color: var(--secondary);
+}
+
+/* thead {
+  border-bottom: 1px solid rgba(100,100,100,.2);
+}
+
+tr + tr,
+tfoot {
+  border-top: 1px solid rgba(100,100,100,.2);
+} */
+
+
+
+
+
+
+
+
+
+
+

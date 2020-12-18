@@ -2,29 +2,33 @@
  * Build script
  *
  * Dimitris Grammatikogiannis November 2018
- * 
+ *
  * License MIT
  */
-const fs = require('fs');
+const {readFile, writeFile} = require('fs').promises;
 const brotliSize = require('brotli-size');
 const gzipSize = require('gzip-size');
 const postcss = require('postcss');
 const kleur = require('kleur');
 
-module.exports.run = (file, flags, opts) => {
-  postcss(opts).process(
-      fs.readFileSync(`${file}.pcss`, 'utf8'),
-      { from: undefined, removeAll: true })
-  .then((result) => {
-      fs.writeFileSync(`${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.css`, result.css);
-      process.stdout.write(kleur.green(`File ${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.css [Brotli-size=${brotliSize.sync(result.css)}, GZip-size=${gzipSize.sync(result.css)}, Uncompressed-size=${result.css.length}] was created succesfully 👍 `) + "\n");
+const {current} = require('./current-settings');
+const {legacy} = require('./compatibility-settings');
+const {minify: minOpts} = require('./minify-settings');
 
-      if (flags.minify) {
-        // Minify
-        postcss(flags.minOpts).process(result.css, { from: undefined }).then((r) => {
-          fs.writeFileSync(`${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.min.css`, r.css);
-          process.stdout.write(kleur.green(`File ${file.replace('src', 'css')}${flags.isIE ? '-ie' : ''}.min.css [Brotli-size=${brotliSize.sync(r.css)}, GZip-size=${gzipSize.sync(r.css)}, Uncompressed-size=${r.css.length}] was created succesfully 👍 `) + "\n");
-        });
-      }
-  });
+module.exports.compile = async (file, flags) => {
+  const plugins = flags.legacy ? legacy : current;
+
+  const contents = await readFile(file, {encoding: 'utf-8'});
+  const {css} = await postcss(plugins).process(contents, {from: file, to: `${file.replace('src', 'css').replace('.css', '')}${flags.legacy ? '-ie' : ''}.css`});
+
+  // Non minified
+  await writeFile(`${file.replace('src', 'css').replace('.css', '')}${flags.legacy ? '-ie' : ''}.css`, css);
+  process.stdout.write(kleur.green(`File ${file.replace('src', 'css')}${flags.legacy ? '-ie' : ''}.css [Brotli-size=${brotliSize.sync(css)}, GZip-size=${gzipSize.sync(css)}, Uncompressed-size=${css.length}] was created succesfully 👍 `) + "\n");
+
+  if (true) {
+    // Minified
+    const min = await postcss(minOpts).process(css, { from: file });
+    await writeFile(`${file.replace('src', 'css').replace('.css', '')}${flags.legacy ? '-ie' : ''}.min.css`, min.css);
+    process.stdout.write(kleur.green(`File ${file.replace('src', 'css').replace('.css', '')}${flags.legacy ? '-ie' : ''}.min.css [Brotli-size=${brotliSize.sync(min.css)}, GZip-size=${gzipSize.sync(min.css)}, Uncompressed-size=${min.css.length}] was created succesfully 👍 `) + "\n");
+  }
 }

@@ -1,0 +1,5 @@
+address:not([class]) {
+  display: block;
+  font-style: normal;
+  margin: var(--line-height) 0;
+}
