@@ -18,11 +18,11 @@
     <div class="container" style="max-width: 60rem; margin-left: auto; margin-right: auto;">
       <section id="headings">
         <h3><a href="#headings">#</a> Headings</h3>
-        <p>
+        <div>
           Elements <code>h1</code>, <code>h2</code>, <code>h3</code>,
           <code>h4</code>, <code>h5</code>, <code>h6</code> make up the
           <em>heading content</em> category.
-        </p>
+        </div>
         <hgroup>
           <h1>h1 I am most important.</h1>
           <h2>h2 Back in my quaint <a href="#">garden</a></h2>
@@ -37,31 +37,31 @@
           <h6>h6 Pack my box with five dozen liquor jugs.</h6>
         </hgroup>
         <footer>
-          <p>
+          <div>
             See the
             <a
               target="_blank"
               href="https://www.w3.org/TR/html5/dom.html#heading-content"
               >Heading Content spec.</a
             >
-          </p>
-          <p>
+          </div>
+          <div>
             Note: these two paragraphs are contained in a
             <code>footer</code> element.
-          </p>
+          </div>
         </footer>
       </section>
       <hr />
       <section id="sections">
         <header>
           <h3><a href="#sections">#</a> Sections</h3>
-          <p>
+          <div>
             Elements <code>article</code>, <code>aside</code>, <code>nav</code>,
             <code>section</code> make up the
             <em>sectioning content</em> category.
-          </p>
+          </div>
           <nav>
-            <p>These links are contained in a <code>nav</code> element.</p>
+            <div>These links are contained in a <code>nav</code> element.</div>
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
@@ -104,24 +104,24 @@
           </section>
         </article>
         <aside>
-          <p>This is contained in an <code>aside</code> element.</p>
+          <div>This is contained in an <code>aside</code> element.</div>
         </aside>
         <footer>
-          <p>
+          <div>
             See the
             <a
               target="_blank"
               href="https://www.w3.org/TR/html5/dom.html#sectioning-content"
               >Sectioning Content spec.</a
             >
-          </p>
+          </div>
         </footer>
       </section>
       <hr />
       <section id="phrasing">
         <header>
           <h3><a href="#phrasing">#</a> Phrasing</h3>
-          <p>
+          <div>
             Elements <code>abbr</code>, <code>b</code>, <code>bdi</code>,
             <code>bdo</code>, <code>br</code>, <code>cite</code>,
             <code>code</code>, <code>data</code>, <code>del</code>,
@@ -133,20 +133,20 @@
             <code>time</code>, <code>u</code>, <code>var</code>,
             <code>wbr</code>, and others make up the
             <em>phrasing content</em> category.
-          </p>
+          </div>
         </header>
-        <p>
+        <div>
           <code>abbr</code>: Some vehicles meet the
           <abbr title="Super Ultra Low Emission Vehicle">SULEV</abbr>
           standard.<br />
           <code>br</code> was used to make this sentence start on a new line.
-        </p>
-        <p>
+        </div>
+        <div>
           <code>bdi</code>: Some languages read right to left,
           <bdi lang="ar">مرحبا</bdi>. <code>bdo</code>:
           <bdo dir="rtl">The normal direction has been overridden.</bdo>
-        </p>
-        <p>
+        </div>
+        <div>
           <code>em</code> is used for <em>emphasis</em> and usually renders as
           italics, contrast that with <code>i</code> which is used for alternate
           voice or to offset from the normal (such as a phrase from a different
@@ -155,22 +155,22 @@
           <strong>importance or urgency</strong> and usually renders as bold,
           contrast that with <code>b</code> which is used to
           <b>draw attention</b> without the semantic meaning of importance.
-        </p>
-        <p>
+        </div>
+        <div>
           <code>cite</code>: In the words of <cite>Charles Bukowski</cite> —
           <q
             >An intellectual says a simple thing in a hard way. An artist says a
             hard thing in a simple way.</q
           >
-        </p>
-        <p>
+        </div>
+        <div>
           <code>data</code> can be used to specify
           <data value="2018-09-24T05:00-07:00">5 A.M.</data> that is
           machine-readable, but <code>time</code> is a better choice for
           specifying <time datetime="2018-09-24T05:00-07:00">5 A.M.</time> in a
           machine-readable format.
-        </p>
-        <p>
+        </div>
+        <div>
           <code>del</code> can be
           <del datetime="2017-10-11T01:25-07:00">varily</del> used to mark
           deletions. <code>ins</code> marks
@@ -181,39 +181,39 @@
           <code>mark</code>: the HTML equivalent of the
           <mark>yellow highlighter</mark>. <code>span</code>: a
           <span>generic element</span> with no meaning by itself.
-        </p>
-        <p>
+        </div>
+        <div>
           <code>dfn</code>: Foreign phrases add a certain
           <dfn lang="fr" title="French: indefinable quality"
             >je ne sais quoi</dfn
           >
           to one's prose.
-        </p>
-        <p>
+        </div>
+        <div>
           <code>q</code>: The W3C page <cite>About W3C</cite> says the W3C’s
           mission is
           <q cite="https://www.w3.org/Consortium/"
             >To lead the World Wide Web to its full potential by developing
             protocols and guidelines that ensure long-term growth for the Web</q
           >.
-        </p>
-        <p><code>kbd</code> and <code>samp</code>: I did this:</p>
+        </div>
+        <div><code>kbd</code> and <code>samp</code>: I did this:</div>
         <pre><samp>c:\&gt;<kbd>format c: /yes</kbd></samp></pre>
-        <p>
+        <div>
           Is that bad? Press <kbd><kbd>Ctrl</kbd></kbd
           >+<kbd><kbd>F5</kbd></kbd> for a hard reload.
-        </p>
-        <p>
+        </div>
+        <div>
           <code>var</code>: To log in, type
           <kbd>ssh <var>user</var>@example.com</kbd>, where <var>user</var> is
           your user ID.
-        </p>
-        <p>
+        </div>
+        <div>
           <code>meter</code> and <code>progress</code>: Storage space usage:
           <meter value="6" max="8">6 blocks used (out of 8 total)</meter>
           Progress: <progress value="37" max="100">37%</progress>
-        </p>
-        <p>
+        </div>
+        <div>
           <code>sub</code> is used for subscripts: H<sub>2</sub>O.
           <code>sup</code> is used for superscripts: E = MC<sup>2</sup>.
           <code>small</code> is used for side comments:
@@ -223,23 +223,23 @@
           >
           <code>wbr</code>: used to specify where a word may break and it is
           super<wbr />cali<wbr />fragil<wbr />istic<wbr />expiali<wbr />do<wbr />cious.
-        </p>
+        </div>
         <footer>
-          <p>
+          <div>
             See the
             <a
               target="_blank"
               href="https://www.w3.org/TR/html5/dom.html#phrasing-content"
               >Phrasing Content spec.</a
             >
-          </p>
+          </div>
         </footer>
       </section>
       <hr />
       <section id="palpable">
         <header>
           <h3><a href="#palpable">#</a> Palpable Content</h3>
-          <p>
+          <div>
             Elements <code>a</code>, <code>address</code>,
             <code>blockquote</code>, <code>button</code>, <code>details</code>,
             <code>dl</code>, <code>fieldset</code>, <code>figure</code>,
@@ -248,34 +248,34 @@
             <code>pre</code>, <code>select</code>, <code>table</code>,
             <code>textarea</code>, <code>ul</code>, and others make up the
             <em>palpable content</em> category.
-          </p>
+          </div>
         </header>
-        <p><code>a</code>: <a href="http://example.com">Example</a>.</p>
-        <p><code>address</code>:</p>
+        <div><code>a</code>: <a href="http://example.com">Example</a>.</div>
+        <div><code>address</code>:</div>
         <address>
           1 Infinite Loop<br />
           Cupertino, CA 95014<br />
           United States
         </address>
-        <p><code>blockquote</code>:</p>
+        <div><code>blockquote</code>:</div>
         <blockquote>
-          <p>I quickly explained that many big jobs involve few hazards</p>
+          <div>I quickly explained that many big jobs involve few hazards</div>
         </blockquote>
         <blockquote>
-          <p>
+          <div>
             This is a mult-line blockquote with a cite reference. People think
             focus means saying yes to the thing you’ve got to focus on. But
             that’s not what it means at all. It means saying no to the hundred
             other good ideas that there are. You have to pick carefully. I’m
             actually as proud of the things we haven’tdone as the things I have
             done. Innovation is saying no to 1,000 things.
-          </p>
+          </div>
           <footer>
             Steve Jobs,
             <cite>Apple Worldwide Developers’ Conference, 1997</cite>
           </footer>
         </blockquote>
-        <p><code>details</code> and <code>summary</code>:</p>
+        <div><code>details</code> and <code>summary</code>:</div>
         <details>
           <summary
             >Copying...
@@ -292,7 +292,7 @@
             <dd>320×240</dd>
           </dl>
         </details>
-        <p><code>dl</code>:</p>
+        <div><code>dl</code>:</div>
         <dl>
           <dt>Definition List Title</dt>
           <dd>Definition list division.</dd>
@@ -307,7 +307,7 @@
           <dt>blockquote</dt>
           <dd>Defines a section that is quoted from another source</dd>
         </dl>
-        <p><code>figure</code>:</p>
+        <div><code>figure</code>:</div>
         <figure>
           <img src="https://www.fillmurray.com/402/295" />
           <figcaption>
@@ -319,75 +319,75 @@
         <h4 id="forms"><a href="#forms">#</a> Forms</h4>
         <hr />
         <form>
-          <p>
+          <div>
             <label for="example-input-email">Email address</label>
             <input type="email" id="example-input-email" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-number">Number</label>
             <input type="number" id="example-input-number" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-password">Password</label>
             <input type="password" id="example-input-password" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-search">Search</label>
             <input type="search" id="example-input-search" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-tel">Telephone number</label>
             <input type="tel" id="example-input-tel" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-text">Text</label>
             <input type="text" id="example-input-text" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-readonly">Read-only</label>
             <input type="text" readonly value="Can't touch this!" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-disabled">Disabled</label>
             <input type="text" disabled value="Not available" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-url">URL</label>
             <input type="url" id="example-input-url" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-color">Color</label>
             <input type="color" id="example-input-color" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-date">Date</label>
             <input type="date" id="example-input-date" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-date-time">Date / Time</label>
             <input type="datetime" id="example-input-date-time" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-date-time-local">Date / Time local</label>
             <input type="datetime-local" id="example-input-date-time-local" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-month">Month</label>
             <input type="month" id="example-input-month" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-week">Week</label>
             <input type="week" id="example-input-week" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-time">Time</label>
             <input type="time" id="example-input-time" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-file">File input</label>
             <input type="file" id="example-input-file" />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-input-range">Range input</label>
             <input
               type="range"
@@ -396,8 +396,8 @@
               max="4"
               value="3"
             />
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-select1">Select</label>
             <select id="example-select1">
               <option>1</option>
@@ -406,8 +406,8 @@
               <option>4</option>
               <option>5</option>
             </select>
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-select1a">Select with size</label>
             <select id="example-select1a" size="2">
               <option>1</option>
@@ -416,8 +416,8 @@
               <option>4</option>
               <option>5</option>
             </select>
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-select2">Multiple select</label>
             <select multiple id="example-select2">
               <option>1</option>
@@ -426,8 +426,8 @@
               <option>4</option>
               <option>5</option>
             </select>
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-optgroup"
               >Select with optgroup: Favorite Car</label
             >
@@ -441,8 +441,8 @@
                 <option>Audi</option>
               </optgroup>
             </select>
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-optgroup2"
               >Select with optgroup and size:Favorite Dish</label
             >
@@ -456,8 +456,8 @@
                 <option>Roast Beef</option>
               </optgroup>
             </select>
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-optgroup3"
               >Multiple select with optgroup: Public transport</label
             >
@@ -475,11 +475,11 @@
                 <option>Balloon</option>
               </optgroup>
             </select>
-          </p>
-          <p>
+          </div>
+          <div>
             <label for="example-textarea">Textarea</label>
             <textarea id="example-textarea" rows="3"></textarea>
-          </p>
+          </div>
           <fieldset>
             <legend>I am legend</legend>
             <div>
@@ -525,7 +525,7 @@
             <input type="checkbox" id="checkbox2" />
             <label for="checkbox2">and/or check me out</label>
           </fieldset>
-          <p>
+          <div>
             <button type="button" name="button">Button</button>
             <input type="button" name="input" value="Input Button" />
             <input type="submit" name="submit" value="Input Submit" />
@@ -533,9 +533,9 @@
             <input type="reset" name="reset" value="Input Reset" />
             <button type="reset" name="reset2">Reset</button>
             <button disabled>Cancel</button>
-          </p>
+          </div>
         </form>
-        <p><code>ul</code> and <code>ol</code>:</p>
+        <div><code>ul</code> and <code>ol</code>:</div>
         <ul>
           <li>
             Unordered List item one
@@ -580,7 +580,7 @@
           <li>List item three</li>
           <li>List item four</li>
         </ol>
-        <p><code>output</code>:</p>
+        <div><code>output</code>:</div>
         <form
           onsubmit="return false"
           oninput="o.value= a.valueAsNumber + b.valueAsNumber"
@@ -589,7 +589,7 @@
           <input name="b" type="number" step="any" /> =
           <output name="o" for="a b"></output>
         </form>
-        <p><code>pre</code>:</p>
+        <div><code>pre</code>:</div>
         <pre>
     pre {
     display: block;
@@ -661,7 +661,7 @@
           In the following table, characteristics are given in the second
           column, with the negative side in the left column and the positive
           side in the right column.
-        </p>
+        </div>
         <table aria-describedby="table-summary">
           <caption>
             Characteristics with positive and negative sides
@@ -736,29 +736,29 @@
           </tfoot>
         </table>
         <footer>
-          <p>
+          <div>
             See the
             <a
               target="_blank"
               href="https://www.w3.org/TR/html5/dom.html#palpable-content"
               >Palpable Content spec.</a
             >
-          </p>
+          </div>
         </footer>
       </section>
       <hr />
       <section id="embeds">
         <header>
           <h3><a href="#embeds">#</a> Embeds</h3>
-          <p>
+          <div>
             Elements <code>audio</code>, <code>canvas</code>,
             <code>embed</code>, <code>iframe</code>, <code>img</code>,
             <code>math</code>, <code>object</code>, <code>picture</code>,
             <code>svg</code>, <code>video</code> make up the
             <em>embedded content</em> category.
-          </p>
+          </div>
         </header>
-        <p>
+        <div>
           <code>audio</code>:
           <audio
             controls
@@ -771,20 +771,20 @@
             href="https://commons.wikimedia.org/wiki/File:What_hath_God_wrought.ogg"
             >from Wikimedia Commons</a
           >.
-        </p>
-        <p>
+        </div>
+        <div>
           <code>iframe</code>:
           <iframe
             sandbox
-            srcdoc="<h1>Sample Document</h1><p>This
-    is a sample content.</p>"
+            srcdoc="<h1>Sample Document</h1><div>This
+    is a sample content.</div>"
           ></iframe>
-        </p>
-        <p>
+        </div>
+        <div>
           <code>img</code>:
           <img src="https://www.fillmurray.com/150/150" alt="Bill Murray" />
-        </p>
-        <p><code>math</code>:</p>
+        </div>
+        <div><code>math</code>:</div>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <mtable>
             <mtr>
@@ -824,7 +824,7 @@
             </mtr>
           </mtable>
         </math>
-        <p>
+        <div>
           <code>picture</code>:
           <picture>
             <source
@@ -835,8 +835,8 @@
             />
             <img src="https://www.fillmurray.com/120/150" alt="Bill Murray" />
           </picture>
-        </p>
-        <p>
+        </div>
+        <div>
           <code>svg</code>:
           <svg
             role="presentation"
@@ -854,23 +854,23 @@
     7.184 15.909 15.91z"
             />
           </svg>
-        </p>
-        <p>
+        </div>
+        <div>
           <code>video</code>:
           <video
             controls
             src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Dwarf_hamsters_running_on_disc_2.ogv"
           ></video>
-        </p>
+        </div>
         <footer>
-          <p>
+          <div>
             See the
             <a
               target="_blank"
               href="https://www.w3.org/TR/html5/dom.html#embedded-content"
               >Embedded Content spec.</a
             >
-          </p>
+          </div>
         </footer>
       </section>
       <hr />
