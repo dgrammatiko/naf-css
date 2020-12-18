@@ -36,11 +36,11 @@ a[rel="download"]:not([class])::before {
 }
 
 a[href^='mailto:']:not([class])::before {
-  content: '📩';
+  content: '✉️';
 }
 
 a[href^='tel:']:not([class])::before {
-  content: '📲';
+  content: '📱';
 }
 
 a[href^='sms:']:not([class])::before {
@@ -48,11 +48,11 @@ a[href^='sms:']:not([class])::before {
 }
 
 a[href^='file:']:not([class])::before {
-  content: '📂';
+  content: '📁';
 }
 
 a[rel="external"]:not([class])::before {
-  content: '🌐';
+  content: '↩︎';
 }
 
 a[rel="bookmark"]:not([class])::before {

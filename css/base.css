@@ -83,15 +83,15 @@ a[rel="download"]:not([class])::before{
   margin-right:.5rem;
   text-decoration:none;
 }a[href^='mailto:']:not([class])::before{
-  content:'📩';
+  content:'✉️';
 }a[href^='tel:']:not([class])::before{
-  content:'📲';
+  content:'📱';
 }a[href^='sms:']:not([class])::before{
   content:'💬';
 }a[href^='file:']:not([class])::before{
-  content:'📂';
+  content:'📁';
 }a[rel="external"]:not([class])::before{
-  content:'🌐';
+  content:'↩︎';
 }a[rel="bookmark"]:not([class])::before{
   content:'🔖';
 }a[rel="download"]:not([class])::before{
@@ -282,23 +282,25 @@ select:not([class]){
   padding:0 0.5rem;
   text-transform:none;
   width:100%
-}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):disabled,textarea:not([class]):disabled,select:not([class]):disabled{
+}input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):disabled,
+  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class])[readonly],
+  textarea:not([class]):disabled,
+  textarea:not([class])[readonly],
+  select:not([class]):disabled,
+  select:not([class])[readonly]{
     background-color:var(--secondary-light);
     border:1px solid var(--secondary-light);
     color:var(--secondary-bg);
     cursor:not-allowed;
-  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):focus,
-  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):hover,
-  textarea:not([class]):focus,
-  textarea:not([class]):hover,
-  select:not([class]):focus,
-  select:not([class]):hover{
+  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):focus:not([disabled]),
+  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):hover:not([disabled]),
+  textarea:not([class]):focus:not([disabled]),
+  textarea:not([class]):hover:not([disabled]),
+  select:not([class]):focus:not([disabled]),
+  select:not([class]):hover:not([disabled]){
     border:2px solid var(--primary);
     box-shadow:0 0 10px var(--primary);
     outline:0;
-  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class])[readonly],textarea:not([class])[readonly],select:not([class])[readonly]{
-    background-color:var(--secondary-light);
-    border:1px solid var(--secondary);
   }kbd:not([class]){
   background-color:var(--secondary-lighter);
   border:1px solid var(--secondary-light);

@@ -60,6 +60,7 @@ label{
 }
 input[type="date"]:not([class]),
 input[type="datetime-local"]:not([class]),
+input[type="datetime"]:not([class]),
 input[type="email"]:not([class]),
 input[type="month"]:not([class]),
 input[type="number"]:not([class]),
@@ -76,9 +77,10 @@ input[type="week"]:not([class]){
 }
 input[type="date"]:not([class]),
 input[type="datetime-local"]:not([class]),
+input[type="datetime"]:not([class]),
 input[type="month"]:not([class]),
 input[type="week"]:not([class]){
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect x='1' y='5' width='37' height='7' fill='%23e8e8e8' /><path d='M1,5 37,5 37,37 1,37 Z M1,13 37,13 37,21 1,21 1,29 37,29 M7,5 7,37 13,37 13,5 19,5 19,37 25,37 25,5 31,5 31,37' stroke='%23ccc' stroke-width='2' fill='none' /></svg>");
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-calendar'><rect x='3' y='4' width='18' height='18' rx='2' ry='2'></rect><line x1='16' y1='2' x2='16' y2='6'></line><line x1='8' y1='2' x2='8' y2='6'></line><line x1='3' y1='10' x2='21' y2='10'></line></svg>");
   padding:0 2.5rem;
 }
 input[type="email"]:not([class]){

@@ -16,22 +16,23 @@ select:not([class]) {
   text-transform: none;
   width: 100%;
 
-  &:disabled {
+  &:disabled,
+  &[readonly] {
     background-color: var(--secondary-light);
     border: 1px solid var(--secondary-light);
     color: var(--secondary-bg);
     cursor: not-allowed;
   }
 
-  &:focus,
-  &:hover {
+  &:focus:not([disabled]),
+  &:hover:not([disabled]) {
     border: 2px solid var(--primary);
     box-shadow: 0 0 10px var(--primary);
     outline: 0;
   }
 
-  &[readonly] {
+   /* {
     background-color: var(--secondary-light);
     border: 1px solid var(--secondary);
-  }
+  } */
 }
