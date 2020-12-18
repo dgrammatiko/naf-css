@@ -67,7 +67,7 @@ a:link:not([class]){
   a:link:not([class]):focus{
     background-color:var(--primary-dark);
     border-radius:var(--border-radius);
-    box-shadow:0 0 10px var(--primary);
+    box-shadow:0 0 .5rem var(--primary);
     color:var(--primary-bg);
     outline:0;
     padding:.2rem 0;
@@ -135,7 +135,9 @@ strong:not([class]){
   font-style:italic;
   margin:1.5rem 0;
   padding:1rem 1.5rem;
-}blockquote:not([class]) > footer:not([class]){
+}blockquote:not([class]) p{
+    margin:.5rem 0;
+  }blockquote:not([class]) > footer:not([class]){
   border:0;
   font-style:normal;
 }blockquote:not([class]) cite:not([class]){
@@ -183,7 +185,7 @@ button:not([class]){
   button:not([class]):not([disabled]):hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
-    box-shadow:0 0 10px var(--primary);
+    box-shadow:0 0 .5rem var(--primary);
     color:var(--primary-bg);
     cursor:pointer;
     outline:0;
@@ -292,14 +294,14 @@ select:not([class]){
     border:1px solid var(--secondary-light);
     color:var(--secondary-bg);
     cursor:not-allowed;
-  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):focus:not([disabled]),
-  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):hover:not([disabled]),
-  textarea:not([class]):focus:not([disabled]),
-  textarea:not([class]):hover:not([disabled]),
-  select:not([class]):focus:not([disabled]),
-  select:not([class]):hover:not([disabled]){
+  }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):focus:not([disabled]):not([type="range"]),
+  input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([class]):hover:not([disabled]):not([type="range"]),
+  textarea:not([class]):focus:not([disabled]):not([type="range"]),
+  textarea:not([class]):hover:not([disabled]):not([type="range"]),
+  select:not([class]):focus:not([disabled]):not([type="range"]),
+  select:not([class]):hover:not([disabled]):not([type="range"]){
     border:2px solid var(--primary);
-    box-shadow:0 0 10px var(--primary);
+    box-shadow:0 0 .5rem var(--primary);
     outline:0;
   }kbd:not([class]){
   background-color:var(--secondary-lighter);

@@ -4,6 +4,10 @@ blockquote:not([class]) {
   font-style: italic;
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
+
+  p {
+    margin: .5rem 0;
+  }
 }
 
 blockquote:not([class]) > footer:not([class]) {

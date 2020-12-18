@@ -168,7 +168,7 @@ input[type="checkbox"]:focus,
   input[type="checkbox"]:hover,
   input[type="radio"]:focus,
   input[type="radio"]:hover{
-    box-shadow:0 0 10px var(--primary);
+    box-shadow:0 0 .5rem var(--primary);
     outline:0;
   }
 input[type="checkbox"]:checked,input[type="radio"]:checked{
@@ -240,7 +240,7 @@ input[type=file]:not([class])::-webkit-file-selector-button:focus,
   input[type=file]:not([class])::-webkit-file-upload-button:hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
-    box-shadow:0 0 10px var(--primary);
+    box-shadow:0 0 .5rem var(--primary);
     color:var(--primary-bg);
     transform:scale(0.98);
   }

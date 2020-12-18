@@ -24,15 +24,10 @@ select:not([class]) {
     cursor: not-allowed;
   }
 
-  &:focus:not([disabled]),
-  &:hover:not([disabled]) {
+  &:focus:not([disabled]):not([type="range"]),
+  &:hover:not([disabled]):not([type="range"]) {
     border: 2px solid var(--primary);
-    box-shadow: 0 0 10px var(--primary);
+    box-shadow: 0 0 .5rem var(--primary);
     outline: 0;
   }
-
-   /* {
-    background-color: var(--secondary-light);
-    border: 1px solid var(--secondary);
-  } */
 }
