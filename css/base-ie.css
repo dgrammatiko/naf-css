@@ -50,23 +50,21 @@ input[type="radio"]{
   top:auto !important;
   width:1px !important;
 }a:not([class]),
-a:link:not([class]){
+a.link{
   background-color:transparent;
   color:var(--primary);
   font-weight:var(--font-weight-bold);
   text-decoration:underline
-}a:not([class]):visited,a:link:not([class]):visited{
+}a:not([class]):visited,a.link:visited{
     color:var(--primary-dark);
   }a:not([class]):hover,
   a:not([class]):focus,
-  a:link:not([class]):hover,
-  a:link:not([class]):focus{
+  a.link:hover,
+  a.link:focus{
     background-color:var(--primary-dark);
-    border-radius:var(--border-radius);
-    box-shadow:0 0 .5rem var(--primary);
+    box-shadow:0 0 .3rem var(--primary);
     color:var(--primary-bg);
     outline:0;
-    padding:.2rem 0;
     text-decoration:none;
   }a[href^='mailto:']:not([class])::before,
 a[href^='tel:']:not([class])::before,
@@ -141,7 +139,8 @@ strong:not([class]){
 [type="reset"]:not([class]),
 [type="submit"]:not([class]),
 [role="button"]:not([class]),
-button:not([class]){
+button:not([class]),
+button.button{
   -webkit-appearance:none;
   background-color:var(--primary-transparent);
   border:1px solid var(--primary);
@@ -157,14 +156,14 @@ button:not([class]){
   text-transform:none;
   transform:scale(1);
   transition:opacity 0.2s ease
-}[type="button"]:not([class]):active,[type="reset"]:not([class]):active,[type="submit"]:not([class]):active,[role="button"]:not([class]):active,button:not([class]):active{
+}[type="button"]:not([class]):active,[type="reset"]:not([class]):active,[type="submit"]:not([class]):active,[role="button"]:not([class]):active,button:not([class]):active,button.button:active{
     transform:scale(0.98);
-  }[type="button"]:not([class]):disabled,[type="reset"]:not([class]):disabled,[type="submit"]:not([class]):disabled,[role="button"]:not([class]):disabled,button:not([class]):disabled{
+  }[type="button"]:not([class]):disabled,[type="reset"]:not([class]):disabled,[type="submit"]:not([class]):disabled,[role="button"]:not([class]):disabled,button:not([class]):disabled,button.button:disabled{
     background:var(--secondary-lighter);
     border:1px solid var(--secondary-lighter);
     color:var(--secondary-bg);
     cursor:not-allowed
-  }[type="button"]:not([class]):disabled:hover,[type="reset"]:not([class]):disabled:hover,[type="submit"]:not([class]):disabled:hover,[role="button"]:not([class]):disabled:hover,button:not([class]):disabled:hover{
+  }[type="button"]:not([class]):disabled:hover,[type="reset"]:not([class]):disabled:hover,[type="submit"]:not([class]):disabled:hover,[role="button"]:not([class]):disabled:hover,button:not([class]):disabled:hover,button.button:disabled:hover{
       cursor:not-allowed;
     }[type="button"]:not([class]):not([disabled]):focus,
   [type="button"]:not([class]):not([disabled]):hover,
@@ -175,10 +174,12 @@ button:not([class]){
   [role="button"]:not([class]):not([disabled]):focus,
   [role="button"]:not([class]):not([disabled]):hover,
   button:not([class]):not([disabled]):focus,
-  button:not([class]):not([disabled]):hover{
+  button:not([class]):not([disabled]):hover,
+  button.button:not([disabled]):focus,
+  button.button:not([disabled]):hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
-    box-shadow:0 0 .5rem var(--primary);
+    box-shadow:0 0 .3rem var(--primary);
     color:var(--primary-bg);
     cursor:pointer;
     outline:0;
@@ -216,7 +217,7 @@ button:not([class]){
   summary:not([class]):hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
-    box-shadow:0 0 .5rem var(--primary);
+    box-shadow:0 0 .3rem var(--primary);
     color:var(--primary-bg);
     cursor:pointer;
     outline:0;
@@ -280,8 +281,11 @@ h6:not([class]){
   max-width:100%;
   height:auto;
 }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]),
+input.input,
 textarea:not([class]),
-select:not([class]){
+textarea.textarea,
+select:not([class]),
+select.select{
   background-color:var(--secondary-lighter);
   border:1px solid var(--secondary-light);
   border-radius:var(--border-radius);
@@ -298,22 +302,34 @@ select:not([class]){
   width:100%
 }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]):disabled,
   input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class])[readonly],
+  input.input:disabled,
+  input.input[readonly],
   textarea:not([class]):disabled,
   textarea:not([class])[readonly],
+  textarea.textarea:disabled,
+  textarea.textarea[readonly],
   select:not([class]):disabled,
-  select:not([class])[readonly]{
+  select:not([class])[readonly],
+  select.select:disabled,
+  select.select[readonly]{
     background-color:var(--secondary-light);
     border:1px solid var(--secondary-light);
     color:var(--secondary-bg);
     cursor:not-allowed;
   }input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]):focus:not([disabled]):not([type="range"]),
   input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]):hover:not([disabled]):not([type="range"]),
+  input.input:focus:not([disabled]):not([type="range"]),
+  input.input:hover:not([disabled]):not([type="range"]),
   textarea:not([class]):focus:not([disabled]):not([type="range"]),
   textarea:not([class]):hover:not([disabled]):not([type="range"]),
+  textarea.textarea:focus:not([disabled]):not([type="range"]),
+  textarea.textarea:hover:not([disabled]):not([type="range"]),
   select:not([class]):focus:not([disabled]):not([type="range"]),
-  select:not([class]):hover:not([disabled]):not([type="range"]){
+  select:not([class]):hover:not([disabled]):not([type="range"]),
+  select.select:focus:not([disabled]):not([type="range"]),
+  select.select:hover:not([disabled]):not([type="range"]){
     border:2px solid var(--primary);
-    box-shadow:0 0 .5rem var(--primary);
+    box-shadow:0 0 .3rem var(--primary);
     outline:0;
   }kbd:not([class]){
   background-color:var(--secondary-lighter);

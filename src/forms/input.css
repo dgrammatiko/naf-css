@@ -101,7 +101,7 @@ input[type="color"]:not([class]) {
   &:hover,
   &:focus {
     border: 2px solid var(--primary);
-    box-shadow: 0 0 .5rem var(--primary);
+    box-shadow: 0 0 .3rem var(--primary);
     outline: 0;
   }
 }

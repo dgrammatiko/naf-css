@@ -22,6 +22,5 @@ module.exports.current = [
     features: {
       'nesting-rules': true,
     },
-    removeAll: true
   }),
 ];

@@ -1,6 +1,9 @@
 input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([class]),
+input.input,
 textarea:not([class]),
-select:not([class]) {
+textarea.textarea,
+select:not([class]),
+select.select {
   background-color: var(--secondary-lighter);
   border: 1px solid var(--secondary-light);
   border-radius: var(--border-radius);
@@ -27,7 +30,7 @@ select:not([class]) {
   &:focus:not([disabled]):not([type="range"]),
   &:hover:not([disabled]):not([type="range"]) {
     border: 2px solid var(--primary);
-    box-shadow: 0 0 .5rem var(--primary);
+    box-shadow: 0 0 .3rem var(--primary);
     outline: 0;
   }
 }

@@ -1,5 +1,5 @@
 a:not([class]),
-a:link:not([class]) {
+a.link {
   background-color: transparent;
   color: var(--primary);
   font-weight: var(--font-weight-bold);
@@ -13,11 +13,9 @@ a:link:not([class]) {
   &:hover,
   &:focus {
     background-color: var(--primary-dark);
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 .5rem var(--primary);
+    box-shadow: 0 0 .3rem var(--primary);
     color: var(--primary-bg);
     outline: 0;
-    padding: .2rem 0;
     text-decoration: none;
   }
   /* stylelint-enable no-descending-specificity */
