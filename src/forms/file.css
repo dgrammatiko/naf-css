@@ -1,5 +1,5 @@
 /* file input */
-input[type="file"]:not([class]) {
+input[type="file"] {
   cursor: pointer;
   display: block;
   font: inherit;
@@ -18,8 +18,8 @@ input[type="file"]:not([class]) {
   }
 }
 
-input[type=file]:not([class])::-webkit-file-selector-button,
-input[type=file]:not([class])::-webkit-file-upload-button {
+input[type=file]::-webkit-file-selector-button,
+input[type=file]::-webkit-file-upload-button {
   -webkit-appearance: button;
   background-color: var(--primary-transparent);
   border: 1px solid var(--primary);

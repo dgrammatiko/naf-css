@@ -1,9 +1,9 @@
-details:not([class]) {
+details {
   border: 0;
   display: block;
 }
 
-summary:not([class]) {
+summary {
   -webkit-appearance: none;
   background-color: var(--primary-transparent);
   border: 1px solid var(--primary);
@@ -33,12 +33,12 @@ summary:not([class]) {
 }
 
 
-/* details:not([class]) summary:not([class]) {
+/* details summary {
   margin: 0 -1rem;
   padding: 1rem;
 }
 
-details[open]:not([class]) summary:not([class]) {
+details[open] summary {
   border-bottom: 1px solid var(--secondary-light);
 } */
 

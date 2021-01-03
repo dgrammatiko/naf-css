@@ -1,3 +1,3 @@
-small:not([class]) {
+small {
   font-size: 0.75em;
 }

@@ -1,4 +1,4 @@
-b:not([class]),
-strong:not([class]) {
+b,
+strong {
   font-weight: var(--font-weight-bolder);
 }

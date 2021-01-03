@@ -1,4 +1,4 @@
-pre:not([class]) > code:not([class]) {
+pre > code {
   display: block;
   overflow-x: auto;
   padding: 10px;

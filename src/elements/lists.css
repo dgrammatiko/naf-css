@@ -1,20 +1,20 @@
-ul:not([class]),
-ol:not([class]) {
+ul,
+ol {
   margin: var(--line-height) 0;
   padding-left: 2rem;
 }
-ul:not([class]) ul:not([class]),
-ol:not([class]) ol:not([class]) {
+ul ul,
+ol ol {
   margin: 0;
 }
 
-li:not([class]) {
+li {
   font-size: 1rem;
   line-height: var(--line-height);
   max-width: 80ch;
   max-width: calc(80ch - 3rem);
 }
 
-li:not([class]) > ul:not([class]) {
+li > ul {
   margin: 0;
 }

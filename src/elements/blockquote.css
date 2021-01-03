@@ -1,4 +1,4 @@
-blockquote:not([class]) {
+blockquote {
   background-color: var(--secondary-transparent);
   border-left: 4px solid var(--primary);
   font-style: italic;
@@ -10,11 +10,11 @@ blockquote:not([class]) {
   }
 }
 
-blockquote:not([class]) > footer:not([class]) {
+blockquote > footer {
   border: 0;
   font-style: normal;
 }
 
-blockquote:not([class]) cite:not([class]) {
+blockquote cite {
   font-style: normal;
 }

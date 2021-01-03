@@ -1,8 +1,8 @@
-[type="button"]:not([class]),
-[type="reset"]:not([class]),
-[type="submit"]:not([class]),
-[role="button"]:not([class]),
-button:not([class]),
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"],
+button,
 button.button {
   -webkit-appearance: none;
   background-color: var(--primary-transparent);

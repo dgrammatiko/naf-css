@@ -1,10 +1,10 @@
-abbr[title]:not([class]) {
+abbr[title] {
   border-bottom: 0;
   position: relative;
   text-decoration: underline dashed var(--primary);
 }
 
-abbr:hover:not([class])::after {
+abbr:hover::after {
   background: var(--primary);
   border-radius: var(--border-radius);
   bottom: 100%;
