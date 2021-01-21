@@ -29,8 +29,8 @@ select.select {
 
   &:focus:not([disabled]):not([type="range"]),
   &:hover:not([disabled]):not([type="range"]) {
-    border: 2px solid var(--primary);
-    box-shadow: 0 0 .3rem var(--primary);
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 .6rem var(--primary);
     outline: 0;
   }
 }

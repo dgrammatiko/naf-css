@@ -15,7 +15,7 @@ input[type="radio"] {
 
   &:focus,
   &:hover {
-    box-shadow: 0 0 .3rem var(--primary);
+    box-shadow: 0 0 .6rem var(--primary);
     outline: 0;
   }
 
