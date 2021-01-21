@@ -145,8 +145,8 @@ input[type="color"]::-webkit-color-swatch{
   }
 input[type="color"]:hover,
   input[type="color"]:focus{
-    border:2px solid var(--primary);
-    box-shadow:0 0 .3rem var(--primary);
+    border:1px solid var(--primary);
+    box-shadow:0 0 .6rem var(--primary);
     outline:0;
   }
 input[type="range"]{
@@ -184,7 +184,7 @@ input[type="checkbox"]:focus,
   input[type="checkbox"]:hover,
   input[type="radio"]:focus,
   input[type="radio"]:hover{
-    box-shadow:0 0 .3rem var(--primary);
+    box-shadow:0 0 .6rem var(--primary);
     outline:0;
   }
 input[type="checkbox"]:checked,input[type="radio"]:checked{
@@ -256,7 +256,7 @@ input[type=file]::-webkit-file-selector-button:focus,
   input[type=file]::-webkit-file-upload-button:hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
-    box-shadow:0 0 .3rem var(--primary);
+    box-shadow:0 0 .6rem var(--primary);
     color:var(--primary-bg);
     transform:scale(0.98);
   }

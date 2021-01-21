@@ -66,7 +66,7 @@ a.link{
   a.link:hover,
   a.link:focus{
     background-color:var(--primary-dark);
-    box-shadow:0 0 .3rem var(--primary);
+    box-shadow:0 0 .6rem var(--primary);
     color:var(--primary-bg);
     outline:0;
     text-decoration:none;
@@ -186,7 +186,7 @@ button.button{
   button.button:not([disabled]):hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
-    box-shadow:0 0 .3rem var(--primary);
+    box-shadow:0 0 .1rem var(--primary);
     color:var(--primary-bg);
     cursor:pointer;
     outline:0;
@@ -225,7 +225,7 @@ button.button{
   summary:hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
-    box-shadow:0 0 .3rem var(--primary);
+    box-shadow:0 0 .6rem var(--primary);
     color:var(--primary-bg);
     cursor:pointer;
     outline:0;
@@ -336,8 +336,8 @@ select.select{
   select:hover:not([disabled]):not([type="range"]),
   select.select:focus:not([disabled]):not([type="range"]),
   select.select:hover:not([disabled]):not([type="range"]){
-    border:2px solid var(--primary);
-    box-shadow:0 0 .3rem var(--primary);
+    border:1px solid var(--primary);
+    box-shadow:0 0 .6rem var(--primary);
     outline:0;
   }kbd{
   background-color:var(--secondary-lighter);
