@@ -33,7 +33,7 @@
     "postcss-preset-env": "6.7.0",
     "rimraf": "3.0.2",
     "serve": "11.3.2",
-    "stylelint": "13.10.0",
+    "stylelint": "13.11.0",
     "stylelint-config-recommended": "3.0.0",
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.19.0"
