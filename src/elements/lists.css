@@ -1,20 +1,20 @@
-ul,
-ol {
+:where(ul),
+:where(ol) {
   margin: var(--line-height) 0;
   padding-left: 2rem;
 }
-ul ul,
-ol ol {
+:where(ul ul),
+:where(ol ol) {
   margin: 0;
 }
 
-li {
+:where(li) {
   font-size: 1rem;
   line-height: var(--line-height);
   max-width: 80ch;
   max-width: calc(80ch - 3rem);
 }
 
-li > ul {
+:where(li > ul) {
   margin: 0;
 }

@@ -1,4 +1,4 @@
-pre > code {
+:where(pre > code) {
   display: block;
   overflow-x: auto;
   padding: 10px;

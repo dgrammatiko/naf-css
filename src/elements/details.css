@@ -1,9 +1,9 @@
-details {
+:where(details) {
   border: 0;
   display: block;
 }
 
-summary {
+:where(summary) {
   -webkit-appearance: none;
   background-color: var(--primary-transparent);
   border: 1px solid var(--primary);

@@ -1,4 +1,4 @@
-code {
+:where(code) {
   background: var(--secondary-transparent);
   border-radius: 6px;
   color: var(--secondary-lighter);

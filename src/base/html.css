@@ -1,4 +1,4 @@
-html {
+:where(html) {
   background-color: var(--secondary-bg);
   box-sizing: border-box;
   color: var(--secondary);

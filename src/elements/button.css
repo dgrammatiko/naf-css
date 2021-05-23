@@ -1,9 +1,9 @@
-[type="button"],
-[type="reset"],
-[type="submit"],
-[role="button"],
-button,
-button.button {
+:where([type="button"]),
+:where([type="reset"]),
+:where([type="submit"]),
+:where([role="button"]),
+:where(button),
+:where(button.button) {
   -webkit-appearance: none;
   background-color: var(--primary-transparent);
   border: 1px solid var(--primary);

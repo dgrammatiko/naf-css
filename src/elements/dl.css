@@ -1,16 +1,16 @@
-dl {
+:where(dl) {
   font-size: 1rem;
   line-height: var(--line-height);
   margin: var(--line-height) 0;
   max-width: 80ch;
 }
 
-dt {
+:where(dt) {
   font-weight: var(--font-weight-bold);
   margin-top: 1rem;
 }
 
-dd {
+:where(dd) {
   font-style: italic;
   margin-left: 1rem;
 }

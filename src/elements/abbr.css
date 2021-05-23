@@ -1,10 +1,10 @@
-abbr[title] {
+:where(abbr[title]) {
   border-bottom: 0;
   position: relative;
   text-decoration: underline dashed var(--primary);
 }
 
-abbr:hover::after {
+:where(abbr):hover::after {
   background: var(--primary);
   border-radius: var(--border-radius);
   bottom: 100%;

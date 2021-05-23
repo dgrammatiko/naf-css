@@ -1,4 +1,4 @@
-b,
-strong {
+:where(b),
+:where(strong) {
   font-weight: var(--font-weight-bolder);
 }

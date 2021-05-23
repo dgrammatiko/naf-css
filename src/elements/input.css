@@ -1,9 +1,9 @@
-input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]),
-input.input,
-textarea,
-textarea.textarea,
-select,
-select.select {
+:where(input):not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+:where(input.input),
+:where(textarea),
+:where(textarea.textarea),
+:where(select),
+:where(select.select) {
   background-color: var(--secondary-lighter);
   border: 1px solid var(--secondary-light);
   border-radius: var(--border-radius);
