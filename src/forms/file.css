@@ -1,5 +1,5 @@
 /* file input */
-input[type="file"] {
+:where(input[type="file"]) {
   cursor: pointer;
   display: block;
   font: inherit;
@@ -11,11 +11,11 @@ input[type="file"] {
   overflow: visible;
   padding: 0 1rem;
   width: 100%;
+}
 
-  &:disabled,
-  &[aria-disabled] {
-    cursor: not-allowed;
-  }
+:where(input[type="file"][disabled]),
+:where(input[type="file"][aria-disabled]) {
+  cursor: not-allowed;
 }
 
 input[type=file]::-webkit-file-selector-button,
