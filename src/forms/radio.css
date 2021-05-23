@@ -1,5 +1,5 @@
-input[type="checkbox"],
-input[type="radio"] {
+:where(input[type="checkbox"]),
+:where(input[type="radio"]) {
   border: 1px solid var(--primary);
   border-radius: 50%;
   /* box-shadow: inset 0 0 2px transparent, inset 0 0 0 1px var(--primary); */
@@ -12,30 +12,35 @@ input[type="radio"] {
   position: relative;
   vertical-align: middle;
   width: 20px;
-
-  &:focus,
-  &:hover {
-    box-shadow: 0 0 .6rem var(--primary);
-    outline: 0;
-  }
-
-  &:checked {
-    background-color: var(--primary);
-  }
-
-  &:active {
-    background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1));
-  }
-
-  &:disabled {
-    border: 1px solid grey;
-    border-radius: 50%;
-    /* box-shadow: inset 0 0 2px grey, inset 0 0 0 1px grey; */
-    cursor: not-allowed;
-  }
 }
 
-input[type="checkbox"]:disabled + label,
-input[type="radio"]:disabled + label {
+:where(input[type="checkbox"]:disabled + label),
+:where(input[type="radio"]:disabled + label) {
+  cursor: not-allowed;
+}
+
+:where(input[type="checkbox"]:checked),
+:where(input[type="radio"]:checked) {
+  background-color: var(--primary);
+}
+
+:where(input[type="checkbox"]:focus),
+:where(input[type="radio"]:focus),
+:where(input[type="checkbox"]:hover),
+:where(input[type="radio"]:hover) {
+  box-shadow: 0 0 .6rem var(--primary);
+  outline: 0;
+}
+
+:where(input[type="checkbox"]:active),
+:where(input[type="radio"]:active) {
+  background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1));
+}
+
+:where(input[type="checkbox"]:disabled),
+:where(input[type="radio"]:disabled) {
+  border: 1px solid grey;
+  border-radius: 50%;
+  /* box-shadow: inset 0 0 2px grey, inset 0 0 0 1px grey; */
   cursor: not-allowed;
 }

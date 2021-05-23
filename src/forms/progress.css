@@ -1,4 +1,4 @@
-progress {
+:where(progress) {
   display: inline-block;
   max-width: 100%;
   min-width: 15rem;

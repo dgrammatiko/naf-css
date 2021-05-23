@@ -1,9 +1,4 @@
-:where([type="button"]),
-:where([type="reset"]),
-:where([type="submit"]),
-:where([role="button"]),
-:where(button),
-:where(button.button) {
+:where(button) {
   -webkit-appearance: none;
   background-color: var(--primary-transparent);
   border: 1px solid var(--primary);
@@ -23,25 +18,69 @@
   &:active {
     transform: scale(0.98);
   }
+}
 
-  &:disabled {
-    background: var(--secondary-lighter);
-    border: 1px solid var(--secondary-lighter);
-    color: var(--secondary-bg);
+:where([type="button"]),
+:where([type="reset"]),
+:where([type="submit"]),
+:where([role="button"]) {
+  -webkit-appearance: none;
+  background-color: var(--primary-transparent);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  display: inline-block;
+  font-size: inherit;
+  line-height: 1;
+  overflow: visible;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transform: scale(1);
+  transition: opacity 0.2s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+:where(button:not([disabled])):focus,
+:where(button:not([disabled])):hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 .1rem var(--primary);
+  color: var(--primary-bg);
+  cursor: pointer;
+  outline: 0;
+}
+
+:where([type="button"][disabled]),
+:where([type="reset"][disabled]),
+:where([type="submit"][disabled]),
+:where([role="button"][disabled]) {
+  background: var(--secondary-lighter);
+  border: 1px solid var(--secondary-lighter);
+  color: var(--secondary-bg);
+  cursor: not-allowed;
+
+  &:hover {
     cursor: not-allowed;
-
-    &:hover {
-      cursor: not-allowed;
-    }
   }
+}
 
-  &:not([disabled]):focus,
-  &:not([disabled]):hover {
-    background-color: var(--primary);
-    border: 1px solid var(--primary);
-    box-shadow: 0 0 .1rem var(--primary);
-    color: var(--primary-bg);
-    cursor: pointer;
-    outline: 0;
-  }
+:where([type="button"]:not([disabled])):focus,
+:where([type="button"]:not([disabled])):hover,
+:where([type="reset"]:not([disabled])):focus,
+:where([type="reset"]:not([disabled])):hover,
+:where([type="submit"]:not([disabled])):focus,
+:where([type="submit"]:not([disabled])):hover,
+:where([role="button"]:not([disabled])):focus,
+:where([role="button"]:not([disabled])):hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 .1rem var(--primary);
+  color: var(--primary-bg);
+  cursor: pointer;
+  outline: 0;
 }

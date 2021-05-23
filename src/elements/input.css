@@ -1,9 +1,37 @@
-:where(input):not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]),
-:where(input.input),
 :where(textarea),
-:where(textarea.textarea),
-:where(select),
-:where(select.select) {
+:where(select) {
+  background-color: var(--secondary-lighter);
+  border: 1px solid var(--secondary-light);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 1rem;
+  height: 2.5rem;
+  line-height: 1;
+  margin: 0;
+  max-width: 100%;
+  min-width: 15rem;
+  padding: 0 0.5rem;
+  text-transform: none;
+  width: 100%;
+
+  &:disabled,
+  &[readonly] {
+    background-color: var(--secondary-light);
+    border: 1px solid var(--secondary-light);
+    color: var(--secondary-bg);
+    cursor: not-allowed;
+  }
+
+  &:focus:not([disabled]):not([type="range"]),
+  &:hover:not([disabled]):not([type="range"]) {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 .6rem var(--primary);
+    outline: 0;
+  }
+}
+
+:where(input:not([type="file"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"])) {
   background-color: var(--secondary-lighter);
   border: 1px solid var(--secondary-light);
   border-radius: var(--border-radius);

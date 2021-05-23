@@ -3,32 +3,32 @@
 *::after{
   box-sizing:border-box;
 }
+:where(ul[role="list"]),
+:where(ol[role="list"]){
+  list-style:none;
+}
 :where(html){
   scroll-behavior:smooth;
 }
 :where(body){
-  line-height:1.5;
   min-height:100vh;
   text-rendering:optimizeSpeed;
+  line-height:1.5;
+}
+:where(a):not([class]){
+  -webkit-text-decoration-skip:ink;
+          text-decoration-skip-ink:auto;
 }
 :where(img),
 :where(picture){
-  display:block;
   max-width:100%;
+  display:block;
 }
 :where(input),
 :where(button),
 :where(textarea),
 :where(select){
   font:inherit;
-}
-:where(ul[role="list"]),
-:where(ol[role="list"]){
-  list-style:none;
-}
-:where(a):not([class]){
-  -webkit-text-decoration-skip:ink;
-          text-decoration-skip-ink:auto;
 }
 @media (prefers-reduced-motion: reduce){
   *,
@@ -38,7 +38,7 @@
             animation-duration:0.01ms !important;
     -webkit-animation-iteration-count:1 !important;
             animation-iteration-count:1 !important;
-    scroll-behavior:auto !important;
     transition-duration:0.01ms !important;
+    scroll-behavior:auto !important;
   }
 }
