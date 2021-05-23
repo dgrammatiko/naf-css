@@ -34,8 +34,10 @@
   *,
   *::before,
   *::after{
-    animation-duration:0.01ms !important;
-    animation-iteration-count:1 !important;
+    -webkit-animation-duration:0.01ms !important;
+            animation-duration:0.01ms !important;
+    -webkit-animation-iteration-count:1 !important;
+            animation-iteration-count:1 !important;
     scroll-behavior:auto !important;
     transition-duration:0.01ms !important;
   }
@@ -67,6 +69,11 @@
 :focus{
   outline:1px dashed var(--primary);
   outline-offset:2px;
+}
+::-moz-selection{
+  background-color:var(--primary);
+  color:var(--primary-bg);
+  text-shadow:none;
 }
 ::selection{
   background-color:var(--primary);
@@ -106,7 +113,7 @@
   font-weight:var(--font-weight-bold);
   text-decoration:underline
 }
-:where(a):visited,:where(a.link):visited{
+:where(a):visited, :where(a.link):visited{
     color:var(--primary-dark);
   }
 :where(a):hover,
@@ -119,6 +126,9 @@
     outline:0;
     text-decoration:none;
   }
+:where(a),
+:where(a.link){
+}
 :where(a[href^='mailto:'])::before,
 :where(a[href^='tel:'])::before,
 :where(a[href^='sms:'])::before,
@@ -154,7 +164,8 @@
 :where(abbr[title]){
   border-bottom:0;
   position:relative;
-  text-decoration:underline dashed var(--primary);
+  -webkit-text-decoration:underline dashed var(--primary);
+          text-decoration:underline dashed var(--primary);
 }
 :where(abbr):hover::after{
   background:var(--primary);
@@ -246,7 +257,7 @@
   transform:scale(1);
   transition:opacity 0.2s ease
 }
-:where([type="button"]):active,:where([type="reset"]):active,:where([type="submit"]):active,:where([role="button"]):active{
+:where([type="button"]):active, :where([type="reset"]):active, :where([type="submit"]):active, :where([role="button"]):active{
     transform:scale(0.98);
   }
 :where(button:not([disabled])):focus,
@@ -267,7 +278,7 @@
   color:var(--secondary-bg);
   cursor:not-allowed
 }
-:where([type="button"][disabled]):hover,:where([type="reset"][disabled]):hover,:where([type="submit"][disabled]):hover,:where([role="button"][disabled]):hover{
+:where([type="button"][disabled]):hover, :where([type="reset"][disabled]):hover, :where([type="submit"][disabled]):hover, :where([role="button"][disabled]):hover{
     cursor:not-allowed;
   }
 :where([type="button"]:not([disabled])):focus,

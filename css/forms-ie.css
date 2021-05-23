@@ -95,7 +95,9 @@
   padding:0 2.5rem;
 }
 :where(input[type="search"]){
-  appearance:textfield;
+  -webkit-appearance:textfield;
+     -moz-appearance:textfield;
+          appearance:textfield;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M36,36 20,20' stroke='%23ccc' stroke-width='3' /><circle cx='15' cy='15' r='14' fill='white' stroke='%23ccc' stroke-width='2' /></svg>");
   padding:0 2.5rem;
 }
@@ -153,7 +155,8 @@
 }
 :where(input[type="search"])::-webkit-search-cancel-button,
 :where(input[type="search"])::-webkit-search-decoration{
-  appearance:none;
+  -webkit-appearance:none;
+          appearance:none;
 }
 :where(input[type="color"]::-webkit-color-swatch-wrapper){
   padding:0;

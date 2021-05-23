@@ -113,7 +113,7 @@
   font-weight:var(--font-weight-bold);
   text-decoration:underline
 }
-:where(a):visited,:where(a.link):visited{
+:where(a):visited, :where(a.link):visited{
     color:var(--primary-dark);
   }
 :where(a):hover,
@@ -126,6 +126,9 @@
     outline:0;
     text-decoration:none;
   }
+:where(a),
+:where(a.link){
+}
 :where(a[href^='mailto:'])::before,
 :where(a[href^='tel:'])::before,
 :where(a[href^='sms:'])::before,
@@ -228,13 +231,11 @@
   text-align:center;
   text-decoration:none;
   text-transform:none;
-  -webkit-transform:scale(1);
-          transform:scale(1);
+  transform:scale(1);
   transition:opacity 0.2s ease
 }
 :where(button):active{
-    -webkit-transform:scale(0.98);
-            transform:scale(0.98);
+    transform:scale(0.98);
   }
 :where([type="button"]),
 :where([type="reset"]),
@@ -253,13 +254,11 @@
   text-align:center;
   text-decoration:none;
   text-transform:none;
-  -webkit-transform:scale(1);
-          transform:scale(1);
+  transform:scale(1);
   transition:opacity 0.2s ease
 }
-:where([type="button"]):active,:where([type="reset"]):active,:where([type="submit"]):active,:where([role="button"]):active{
-    -webkit-transform:scale(0.98);
-            transform:scale(0.98);
+:where([type="button"]):active, :where([type="reset"]):active, :where([type="submit"]):active, :where([role="button"]):active{
+    transform:scale(0.98);
   }
 :where(button:not([disabled])):focus,
 :where(button:not([disabled])):hover{
@@ -279,7 +278,7 @@
   color:var(--secondary-bg);
   cursor:not-allowed
 }
-:where([type="button"][disabled]):hover,:where([type="reset"][disabled]):hover,:where([type="submit"][disabled]):hover,:where([role="button"][disabled]):hover{
+:where([type="button"][disabled]):hover, :where([type="reset"][disabled]):hover, :where([type="submit"][disabled]):hover, :where([role="button"][disabled]):hover{
     cursor:not-allowed;
   }
 :where([type="button"]:not([disabled])):focus,
@@ -327,8 +326,7 @@
   text-align:center;
   text-decoration:none;
   text-transform:none;
-  -webkit-transform:scale(1);
-          transform:scale(1);
+  transform:scale(1);
   transition:opacity 0.2s ease;
   width:100%
 }

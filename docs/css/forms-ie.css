@@ -1,17 +1,4 @@
-:where(textarea),
-:where(input){
-  letter-spacing:inherit;
-  word-spacing:inherit;
-}
-:where(input){
-  overflow:visible;
-}
-:where(input):not([type="range"]),
-:where(select),
-:where(textarea){
-  -webkit-appearance:none;
-  font-family:inherit;
-}
+
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button{
   height:auto;
@@ -34,9 +21,25 @@
 :-moz-focusring{
   outline:1px dotted ButtonText;
 }
-:where(input):not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([role="button"]),
+:where(textarea),
+:where(input){
+  letter-spacing:inherit;
+  word-spacing:inherit;
+}
+:where(input){
+  overflow:visible;
+}
 :where(select),
 :where(textarea){
+  -webkit-appearance:none;
+  display:block;
+  font-family:inherit;
+}
+:where(input):not([type="range"]){
+  -webkit-appearance:none;
+  font-family:inherit;
+}
+:where(input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([role="button"])){
   display:block;
 }
 :where(fieldset){
@@ -112,14 +115,6 @@
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M26,4 21,36 M15,4 10,36 M4,15 36,15 M2,26 34,26' fill='none' stroke='%23ccc' stroke-width='2' /></svg>");
   padding:0 2.5rem;
 }
-:where(input[type="number"])::-webkit-inner-spin-button,
-:where(input[type="number"])::-webkit-outer-spin-button{
-  height:auto;
-}
-:where(input[type="search"])::-webkit-search-cancel-button,
-:where(input[type="search"])::-webkit-search-decoration{
-  appearance:none;
-}
 :where(input[type="image"]),
 :where(input[type="file"]){
   border:0;
@@ -130,33 +125,43 @@
   min-width:auto;
   padding:0;
 }
-input[type="color"]{
+:where(input[type="color"]){
   background:none;
   border:none;
   border-radius:var(--border-radius);
   height:2rem;
-  width:5rem
+  width:5rem;
 }
-input[type="color"]::-webkit-color-swatch-wrapper{
-    padding:0;
-  }
-input[type="color"]::-webkit-color-swatch{
-    border:solid 1px var(--primary);
-  }
-input[type="color"]:hover,
-  input[type="color"]:focus{
-    border:1px solid var(--primary);
-    box-shadow:0 0 .6rem var(--primary);
-    outline:0;
-  }
 :where(input[type="range"]){
   padding:0;
 }
-:where(input):not([type="file"]):invalid,
 :where(optgroup):invalid,
 :where(option):invalid,
 :where(textarea):invalid,
 :where(select):invalid{
+  border-color:var(--danger);
+}
+:where(input[type="color"]:focus),
+:where(input[type="color"]:hover){
+  border:1px solid var(--primary);
+  box-shadow:0 0 .6rem var(--primary);
+  outline:0;
+}
+:where(input[type="number"])::-webkit-inner-spin-button,
+:where(input[type="number"])::-webkit-outer-spin-button{
+  height:auto;
+}
+:where(input[type="search"])::-webkit-search-cancel-button,
+:where(input[type="search"])::-webkit-search-decoration{
+  appearance:none;
+}
+:where(input[type="color"]::-webkit-color-swatch-wrapper){
+  padding:0;
+}
+:where(input[type="color"]::-webkit-color-swatch){
+  border:solid 1px var(--primary);
+}
+:where(input):not([type="file"]):invalid{
   border-color:var(--danger);
 }
 :where(textarea){
@@ -178,28 +183,31 @@ input[type="color"]:hover,
   padding:1px;
   position:relative;
   vertical-align:middle;
-  width:20px
+  width:20px;
 }
-:where(input[type="checkbox"]):focus,
-  :where(input[type="checkbox"]):hover,
-  :where(input[type="radio"]):focus,
-  :where(input[type="radio"]):hover{
-    box-shadow:0 0 .6rem var(--primary);
-    outline:0;
-  }
-:where(input[type="checkbox"]):checked,:where(input[type="radio"]):checked{
-    background-color:var(--primary);
-  }
-:where(input[type="checkbox"]):active,:where(input[type="radio"]):active{
-    background-image:linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1));
-  }
-:where(input[type="checkbox"]):disabled,:where(input[type="radio"]):disabled{
-    border:1px solid grey;
-    border-radius:50%;
-    cursor:not-allowed;
-  }
 :where(input[type="checkbox"]:disabled + label),
 :where(input[type="radio"]:disabled + label){
+  cursor:not-allowed;
+}
+:where(input[type="checkbox"]:checked),
+:where(input[type="radio"]:checked){
+  background-color:var(--primary);
+}
+:where(input[type="checkbox"]:focus),
+:where(input[type="radio"]:focus),
+:where(input[type="checkbox"]:hover),
+:where(input[type="radio"]:hover){
+  box-shadow:0 0 .6rem var(--primary);
+  outline:0;
+}
+:where(input[type="checkbox"]:active),
+:where(input[type="radio"]:active){
+  background-image:linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1));
+}
+:where(input[type="checkbox"]:disabled),
+:where(input[type="radio"]:disabled){
+  border:1px solid grey;
+  border-radius:50%;
   cursor:not-allowed;
 }
 :where(select){
@@ -233,14 +241,14 @@ select::-ms-expand{
   min-width:auto;
   overflow:visible;
   padding:0 1rem;
-  width:100%
+  width:100%;
 }
-:where(input[type="file"]):disabled,
-  :where(input[type="file"])[aria-disabled]{
-    cursor:not-allowed;
-  }
-:where(input[type=file])::-webkit-file-selector-button,
-:where(input[type=file])::-webkit-file-upload-button{
+:where(input[type="file"][disabled]),
+:where(input[type="file"][aria-disabled]){
+  cursor:not-allowed;
+}
+input[type=file]::-webkit-file-selector-button,
+input[type=file]::-webkit-file-upload-button{
   -webkit-appearance:button;
   background-color:var(--primary-transparent);
   border:1px solid var(--primary);
@@ -250,10 +258,10 @@ select::-ms-expand{
   -webkit-transition:opacity 0.2s ease;
   transition:opacity 0.2s ease
 }
-:where(input[type=file])::-webkit-file-selector-button:focus,
-  :where(input[type=file])::-webkit-file-selector-button:hover,
-  :where(input[type=file])::-webkit-file-upload-button:focus,
-  :where(input[type=file])::-webkit-file-upload-button:hover{
+input[type=file]::-webkit-file-selector-button:focus,
+  input[type=file]::-webkit-file-selector-button:hover,
+  input[type=file]::-webkit-file-upload-button:focus,
+  input[type=file]::-webkit-file-upload-button:hover{
     background-color:var(--primary);
     border:1px solid var(--primary);
     box-shadow:0 0 .6rem var(--primary);

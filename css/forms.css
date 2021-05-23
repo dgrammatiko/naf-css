@@ -257,8 +257,7 @@ input[type=file]::-webkit-file-upload-button{
   border:1px solid var(--primary);
   border-radius:var(--border-radius);
   color:var(--primary);
-  -webkit-transform:scale(1);
-          transform:scale(1);
+  transform:scale(1);
   -webkit-transition:opacity 0.2s ease;
   transition:opacity 0.2s ease
 }
@@ -270,8 +269,7 @@ input[type=file]::-webkit-file-selector-button:focus,
     border:1px solid var(--primary);
     box-shadow:0 0 .6rem var(--primary);
     color:var(--primary-bg);
-    -webkit-transform:scale(0.98);
-            transform:scale(0.98);
+    transform:scale(0.98);
   }
 :where(progress){
   display:inline-block;
