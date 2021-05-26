@@ -28,7 +28,7 @@
 :where(input[type="radio"]:focus),
 :where(input[type="checkbox"]:hover),
 :where(input[type="radio"]:hover) {
-  box-shadow: 0 0 .6rem var(--primary);
+  box-shadow: 0 0 .3rem var(--primary);
   outline: 0;
 }
 

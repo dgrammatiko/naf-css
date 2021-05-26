@@ -13,7 +13,7 @@
   &:hover,
   &:focus {
     background-color: var(--primary-dark);
-    box-shadow: 0 0 .6rem var(--primary);
+    box-shadow: 0 0 .3rem var(--primary);
     color: var(--primary-bg);
     outline: 0;
     text-decoration: none;

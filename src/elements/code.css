@@ -1,7 +1,7 @@
 :where(code) {
   background: var(--secondary-transparent);
   border-radius: 6px;
-  color: var(--secondary-lighter);
+  color: var(--secondary);
   font-size: 1em;
   padding: 2.5px 5px;
 }
