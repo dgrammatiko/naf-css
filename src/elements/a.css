@@ -1,5 +1,5 @@
-a,
-a.link {
+:where(a),
+:where(a.link) {
   background-color: transparent;
   color: var(--primary);
   font-weight: var(--font-weight-bold);
@@ -13,7 +13,7 @@ a.link {
   &:hover,
   &:focus {
     background-color: var(--primary-dark);
-    box-shadow: 0 0 .6rem var(--primary);
+    box-shadow: 0 0 .3rem var(--primary);
     color: var(--primary-bg);
     outline: 0;
     text-decoration: none;
@@ -21,42 +21,42 @@ a.link {
   /* stylelint-enable no-descending-specificity */
 }
 
-a[href^='mailto:']::before,
-a[href^='tel:']::before,
-a[href^='sms:']::before,
-a[href^='file:']::before,
-a[rel="external"]::before,
-a[rel="bookmark"]::before,
-a[rel="download"]::before {
+:where(a[href^='mailto:'])::before,
+:where(a[href^='tel:'])::before,
+:where(a[href^='sms:'])::before,
+:where(a[href^='file:'])::before,
+:where(a[rel="external"])::before,
+:where(a[rel="bookmark"])::before,
+:where(a[rel="download"])::before {
   display: inline-block;
   margin-right: .5rem;
   text-decoration: none;
 }
 
-a[href^='mailto:']::before {
+:where(a[href^='mailto:'])::before {
   content: '✉️';
 }
 
-a[href^='tel:']::before {
+:where(a[href^='tel:'])::before {
   content: '📱';
 }
 
-a[href^='sms:']::before {
+:where(a[href^='sms:'])::before {
   content: '💬';
 }
 
-a[href^='file:']::before {
+:where(a[href^='file:'])::before {
   content: '📁';
 }
 
-a[rel="external"]::before {
+:where(a[rel="external"])::before {
   content: '↩︎';
 }
 
-a[rel="bookmark"]::before {
+:where(a[rel="bookmark"])::before {
   content: '🔖';
 }
 
-a[rel="download"]::before {
+:where(a[rel="download"])::before {
   content: '⤵️';
 }

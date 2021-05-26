@@ -1,4 +1,4 @@
-blockquote {
+:where(blockquote) {
   background-color: var(--secondary-transparent);
   border-left: 4px solid var(--primary);
   font-style: italic;
@@ -10,11 +10,11 @@ blockquote {
   }
 }
 
-blockquote > footer {
+:where(blockquote > footer) {
   border: 0;
   font-style: normal;
 }
 
-blockquote cite {
+:where(blockquote cite) {
   font-style: normal;
 }

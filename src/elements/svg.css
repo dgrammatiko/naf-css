@@ -1,4 +1,4 @@
-svg:not(:root) {
+:where(svg):not(:root) {
   display: inline-block;
   font-size: inherit;
   height: 1.2em;

@@ -15,8 +15,8 @@ const { compile } = require('./build-tools/compile-css');
 
   files.forEach(file => {
     if (file.startsWith('_') || !file.endsWith('.css')) return;
-    forExec.push(compile(`src/${file}`, {legacy: false}));
-    forExec.push(compile(`src/${file}`, {legacy: true}));
+    forExec.push(compile(`src/${file}`, {legacy: false, nonMinified: false, minified: true}));
+    // forExec.push(compile(`src/${file}`, {legacy: true}));
   });
 
   Promise.all(forExec).catch(err => console.dir(err));

@@ -1,5 +1,5 @@
 /* file input */
-input[type="file"] {
+:where(input[type="file"]) {
   cursor: pointer;
   display: block;
   font: inherit;
@@ -11,12 +11,21 @@ input[type="file"] {
   overflow: visible;
   padding: 0 1rem;
   width: 100%;
-
-  &:disabled,
-  &[aria-disabled] {
-    cursor: not-allowed;
-  }
 }
+
+:where(input[type="file"][disabled]),
+:where(input[type="file"][aria-disabled]) {
+  cursor: not-allowed;
+}
+
+ /* {
+  -webkit-appearance: button;
+  background-color: var(--primary-transparent);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  transform: scale(1);
+} */
 
 input[type=file]::-webkit-file-selector-button,
 input[type=file]::-webkit-file-upload-button {
@@ -32,7 +41,7 @@ input[type=file]::-webkit-file-upload-button {
   &:hover {
     background-color: var(--primary);
     border: 1px solid var(--primary);
-    box-shadow: 0 0 .6rem var(--primary);
+    box-shadow: 0 0 .3rem var(--primary);
     color: var(--primary-bg);
     transform: scale(0.98);
   }

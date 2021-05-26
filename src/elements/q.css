@@ -1,13 +1,12 @@
-q {
+:where(q) {
   font-style: italic;
-}
 
-q::before {
-  content: open-quote;
-  font-style: normal;
-}
-
-q::after {
-  content: close-quote;
-  font-style: normal;
+  & ::before {
+    content: open-quote;
+    font-style: normal;
+  }
+  & ::after {
+    content: close-quote;
+    font-style: normal;
+  }
 }

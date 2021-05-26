@@ -1,4 +1,4 @@
-kbd {
+:where(kbd) {
   background-color: var(--secondary-lighter);
   border: 1px solid var(--secondary-light);
   border-radius: var(--border-radius);

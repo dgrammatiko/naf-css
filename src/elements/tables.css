@@ -1,4 +1,4 @@
-table {
+:where(table) {
   background-color: var(--secondary-bg);
   border: 0;
   border-collapse: collapse;
@@ -6,33 +6,33 @@ table {
   width: 100%;
 }
 
-thead {
+:where(thead) {
   box-shadow: inset 0 -2px var(--primary);
 }
 
-tfoot {
+:where(tfoot) {
   box-shadow: inset 0 2px var(--primary);
 }
 
-caption {
+:where(caption) {
   caption-side: top;
   padding: .5rem 0;
   text-align: start;
 }
 
-td,
-th {
+:where(td),
+:where(th) {
   padding: 0.5rem;
   text-align: left;
   vertical-align: middle;
 }
 
-th {
+:where(th) {
   background: rgba(100,100,100,.025);
   font-weight: var(--font-weight-bolder);
 }
 
-tbody tr:nth-child(even) {
+:where(tbody tr:nth-child(even)) {
   background-color: var(--secondary-transparent);
   color: var(--secondary);
 }

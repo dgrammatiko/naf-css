@@ -1,4 +1,4 @@
-mark {
+:where(mark) {
   background-color: var(--primary-bright);
   border-radius: 2px;
   color: var(--secondary-darker);

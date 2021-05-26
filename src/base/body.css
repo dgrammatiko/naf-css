@@ -1,4 +1,4 @@
-body {
+:where(body) {
   font-family: var(--font-family-main);
   font-size: 1rem;
   letter-spacing: 0.01em;
