@@ -18,7 +18,7 @@
   "devDependencies": {
     "autoprefixer": "10.3.1",
     "brotli-size": "latest",
-    "cssnano": "5.0.7",
+    "cssnano": "5.0.8",
     "gzip-size": "latest",
     "kleur": "latest",
     "modern-css-reset": "1.4.0",
