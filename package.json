@@ -16,7 +16,7 @@
   "author": "Dimitris Grammatikogiannis <d.grammatiko@gmail.com> (dgrammatiko.online)",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "10.3.1",
+    "autoprefixer": "10.3.2",
     "brotli-size": "latest",
     "cssnano": "5.0.8",
     "gzip-size": "latest",
