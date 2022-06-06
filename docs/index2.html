@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML Elements Page</title>
 
-    <link rel="stylesheet" href="css/vars.min.css" />
-    <link rel="stylesheet" href="css/base.min.css" />
-    <link rel="stylesheet" href="css/forms.min.css" />
+    <link rel="stylesheet" href="css/vars.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/forms.css" />
   </head>
 
   <body>
@@ -592,15 +592,15 @@
         <div><code>pre</code>:</div>
         <pre>
     pre {
-      display: block;
-      padding: 7px;
-      background-color: #F5F5F5;
-      border: 1px solid #E1E1E8;
-      border-radius: 3px;
-      white-space: pre-wrap;
-      word-break: break-all;
-      font-family: Menlo, Monaco;
-      line-height: 160%;
+    display: block;
+    padding: 7px;
+    background-color: #F5F5F5;
+    border: 1px solid #E1E1E8;
+    border-radius: 3px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: Menlo, Monaco;
+    line-height: 160%;
     }</pre
         >
         <pre><samp>You are in an open field west of a big white house with a boarded
@@ -747,7 +747,7 @@
         </footer>
       </section>
       <hr />
-      <section id="embeds" style="max-width: 60rem; margin-left: auto; margin-right: auto;">
+      <section id="embeds">
         <header>
           <h3><a href="#embeds">#</a> Embeds</h3>
           <div>
@@ -846,7 +846,6 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill="currentColor"
               d="M19.199 24C19.199 13.467
     10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291
     17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301
@@ -876,5 +875,8 @@
       </section>
       <hr />
     </div>
+    <script>
+      document.querySelector(".indeterminate").indeterminate = true;
+    </script>
   </body>
 </html>
