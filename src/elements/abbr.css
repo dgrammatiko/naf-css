@@ -4,7 +4,7 @@
   text-decoration: underline dashed var(--primary);
 }
 
-:where(abbr):hover::after {
+:where(abbr[title]):hover::after {
   background: var(--primary);
   border-radius: var(--border-radius);
   bottom: 100%;

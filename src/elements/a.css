@@ -1,6 +1,7 @@
 :where(a),
 :where(a.link) {
   background-color: transparent;
+  box-shadow: none;
   color: var(--primary);
   font-weight: var(--font-weight-bold);
   text-decoration: underline;
