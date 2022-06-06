@@ -38,11 +38,11 @@
     --primaryH: 185;
     --primaryS: 100%;
     --primaryL: 86%;
-    --primary-bg: #263238;
+    --primary-bg: #1b1c1d;
     --secondaryH: 0;
     --secondaryS: 1%;
     --secondaryL: 89%;
-    --secondary-bg: #263238;
+    --secondary-bg: #1b1c1d;
   }
   img {
     opacity: .75;
@@ -57,9 +57,9 @@
   --primaryH: 185;
   --primaryS: 100%;
   --primaryL: 86%;
-  --primary-bg: #263238;
+  --primary-bg: #1b1c1d;
   --secondaryH: 0;
   --secondaryS: 1%;
   --secondaryL: 89%;
-  --secondary-bg: #263238;
+  --secondary-bg: #1b1c1d;
 }
