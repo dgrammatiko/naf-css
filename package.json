@@ -30,7 +30,7 @@
     "postcss-easy-import": "4.0.0",
     "postcss-mixins": "9.0.4",
     "postcss-nested": "5.0.6",
-    "postcss-preset-env": "7.7.1",
+    "postcss-preset-env": "7.8.2",
     "rimraf": "3.0.2",
     "stylelint": "14.8.5",
     "stylelint-config-recommended": "7.0.0",
