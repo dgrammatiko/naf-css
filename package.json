@@ -34,6 +34,6 @@
     "rimraf": "3.0.2",
     "stylelint": "14.16.1",
     "stylelint-config-recommended": "9.0.0",
-    "stylelint-order": "5.0.0"
+    "stylelint-order": "6.0.0"
   }
 }
