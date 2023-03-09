@@ -31,7 +31,7 @@
     "postcss-mixins": "9.0.4",
     "postcss-nested": "6.0.1",
     "postcss-preset-env": "8.0.1",
-    "rimraf": "4.3.1",
+    "rimraf": "4.4.0",
     "stylelint": "15.2.0",
     "stylelint-config-recommended": "10.0.1",
     "stylelint-order": "6.0.3"
