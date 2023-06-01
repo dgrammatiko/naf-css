@@ -74,5 +74,5 @@
 }
 
 :where(input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([role="button"])) {
-  display: block;
+  display: inline-flex;
 }
