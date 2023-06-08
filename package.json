@@ -7,7 +7,8 @@
     "lint": "npx stylelint \"src/**/*.css\"",
     "lint:fix": "npx stylelint \"src/**/*.css\" --fix",
     "build": "npm run lint && node build.js",
-    "update:browserlist": "npx browserslist@latest --update-db"
+    "update:browserlist": "npx browserslist@latest --update-db",
+    "dev": "npx http-server "
   },
   "repository": {
     "type": "git",
