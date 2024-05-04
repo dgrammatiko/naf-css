@@ -25,7 +25,7 @@
     "modern-css-reset": "1.4.0",
     "postcss": "8.4.38",
     "postcss-cli": "11.0.0",
-    "postcss-custom-media": "10.0.4",
+    "postcss-custom-media": "10.0.6",
     "postcss-custom-selectors": "7.1.8",
     "postcss-discard-comments": "7.0.0",
     "postcss-easy-import": "4.0.0",
