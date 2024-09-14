@@ -23,7 +23,7 @@
     "gzip-size": "7.0.0",
     "kleur": "4.1.5",
     "modern-css-reset": "1.4.0",
-    "postcss": "8.4.45",
+    "postcss": "8.4.47",
     "postcss-cli": "11.0.0",
     "postcss-custom-media": "10.0.8",
     "postcss-custom-selectors": "7.1.12",
