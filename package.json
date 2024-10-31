@@ -30,7 +30,7 @@
     "postcss-discard-comments": "7.0.3",
     "postcss-easy-import": "4.0.0",
     "postcss-mixins": "10.0.1",
-    "postcss-nested": "6.2.0",
+    "postcss-nested": "7.0.1",
     "postcss-preset-env": "9.6.0",
     "rimraf": "5.0.10",
     "stylelint": "16.10.0",
