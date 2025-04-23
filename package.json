@@ -33,7 +33,7 @@
     "postcss-nested": "7.0.2",
     "postcss-preset-env": "10.1.6",
     "rimraf": "6.0.1",
-    "stylelint": "16.18.0",
+    "stylelint": "16.19.0",
     "stylelint-config-recommended": "14.0.1",
     "stylelint-order": "6.0.4"
   }
