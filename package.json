@@ -29,7 +29,7 @@
     "postcss-custom-selectors": "8.0.5",
     "postcss-discard-comments": "7.0.5",
     "postcss-easy-import": "4.0.0",
-    "postcss-mixins": "11.0.3",
+    "postcss-mixins": "12.1.2",
     "postcss-nested": "7.0.2",
     "postcss-preset-env": "10.6.1",
     "rimraf": "6.1.2",
