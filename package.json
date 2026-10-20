@@ -4,7 +4,7 @@
   "description": "A lightweight, progressive, PostCSS, glorified reset thingy.",
   "main": "src/base.css",
   "scripts": {
-    "lint": "npx stylelint \"src/**/*.css\"",
+    "lint": "npx stylelint \"src/**/*.css\" --fix",
     "lint:fix": "npx stylelint \"src/**/*.css\" --fix",
     "build": "npm run lint && node build.js",
     "update:browserlist": "npx browserslist@latest --update-db",
